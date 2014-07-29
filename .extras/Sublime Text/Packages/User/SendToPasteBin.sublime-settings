@@ -1,0 +1,7 @@
+{
+  "api_dev_key":  "9536d1de24d495f31affb55b9d83e5a5",
+  "api_user_key": "46416fed3e831951c9eb4647c777493c",
+
+  // 0 = Public, 1 = Unlisted, 2 = Private
+  "paste_privacy": 1,
+}

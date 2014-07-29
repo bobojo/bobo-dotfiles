@@ -1,0 +1,34 @@
+{
+	"installed_packages":
+	[
+		"BracketHighlighter",
+		"DashDoc",
+		"DocBlockr",
+		"Drupal",
+		"Drupal Completions",
+		"FuzzyFilePath",
+		"GitGutter",
+		"Open URL",
+		"Phpcs",
+		"Sass",
+		"SendToPasteBin",
+		"SideBarEnhancements",
+		"subDrush",
+		"SublimeCodeIntel",
+		"SublimeGit",
+		"SublimeLinter",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jshint",
+		"SublimeLinter-json",
+		"SublimeLinter-php",
+		"SublimeLinter-phpcs",
+		"SublimeLinter-ruby",
+		"Sublimerge Pro",
+		"SyncedSideBar",
+		"Tag",
+		"Terminal Notifier",
+		"Theme - amCoder",
+		"TrailingSpaces",
+		"Xdebug Client"
+	]
+}
