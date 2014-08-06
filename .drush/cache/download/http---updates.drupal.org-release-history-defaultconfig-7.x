@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Default config</title>
+<short_name>defaultconfig</short_name>
+<dc:creator>fabsor</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<supported_majors>1</supported_majors>
+<default_major>1</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/defaultconfig</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Actively maintained</value></term>
+   <term><name>Development status</name><value>Under active development</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>defaultconfig 7.x-1.0-alpha9</name>
+  <version>7.x-1.0-alpha9</version>
+  <tag>7.x-1.0-alpha9</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>alpha9</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1832580</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha9.tar.gz</download_link>
+  <date>1352143559</date>
+  <mdhash>0540b53e82efa90a13a867fcd34c230e</mdhash>
+  <filesize>14479</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha9.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>0540b53e82efa90a13a867fcd34c230e</md5>
+    <size>14479</size>
+    <filedate>1352143559</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha9.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>0317ef20a5a046b43c331a1ea93d4e4a</md5>
+    <size>16736</size>
+    <filedate>1352143559</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>defaultconfig 7.x-1.0-alpha8</name>
+  <version>7.x-1.0-alpha8</version>
+  <tag>7.x-1.0-alpha8</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>alpha8</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1600092</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha8.tar.gz</download_link>
+  <date>1337934955</date>
+  <mdhash>5be960ce0813f3ea3537213c75b51a54</mdhash>
+  <filesize>14446</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha8.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>5be960ce0813f3ea3537213c75b51a54</md5>
+    <size>14446</size>
+    <filedate>1337934955</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha8.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>920728c8e3b08e777be25ea35485fd92</md5>
+    <size>16688</size>
+    <filedate>1337934955</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>defaultconfig 7.x-1.0-alpha7</name>
+  <version>7.x-1.0-alpha7</version>
+  <tag>7.x-1.0-alpha7</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>alpha7</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1561890</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha7.tar.gz</download_link>
+  <date>1336180555</date>
+  <mdhash>e69411128f35586d75c74cb1db3a6886</mdhash>
+  <filesize>14408</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha7.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>e69411128f35586d75c74cb1db3a6886</md5>
+    <size>14408</size>
+    <filedate>1336180555</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha7.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>c0c8a243c41bfd36585653cb2531cfbf</md5>
+    <size>16643</size>
+    <filedate>1336180555</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>defaultconfig 7.x-1.0-alpha6</name>
+  <version>7.x-1.0-alpha6</version>
+  <tag>7.x-1.0-alpha6</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>alpha6</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1485358</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha6.tar.gz</download_link>
+  <date>1331901691</date>
+  <mdhash>c293c4f25d302608c007772a06c4c1b1</mdhash>
+  <filesize>12709</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha6.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>c293c4f25d302608c007772a06c4c1b1</md5>
+    <size>12709</size>
+    <filedate>1331901691</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha6.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>3aebf243f4c78ae5fde049a99179e302</md5>
+    <size>14621</size>
+    <filedate>1331901691</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>defaultconfig 7.x-1.0-alpha5</name>
+  <version>7.x-1.0-alpha5</version>
+  <tag>7.x-1.0-alpha5</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>alpha5</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1405622</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha5.tar.gz</download_link>
+  <date>1326642638</date>
+  <mdhash>71c4fb007e489b720c5053931960038c</mdhash>
+  <filesize>12534</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha5.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>71c4fb007e489b720c5053931960038c</md5>
+    <size>12534</size>
+    <filedate>1326642638</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha5.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>e9bbb7ae8233cb3492190dd999b51268</md5>
+    <size>14307</size>
+    <filedate>1326642638</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>defaultconfig 7.x-1.0-alpha4</name>
+  <version>7.x-1.0-alpha4</version>
+  <tag>7.x-1.0-alpha4</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>alpha4</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1352600</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha4.tar.gz</download_link>
+  <date>1322231140</date>
+  <mdhash>e36adf8c3a89c4a7c9a0c16e6f19c848</mdhash>
+  <filesize>10313</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha4.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>e36adf8c3a89c4a7c9a0c16e6f19c848</md5>
+    <size>10313</size>
+    <filedate>1322231140</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha4.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>62c17b0f1721388451608e68c4bfe521</md5>
+    <size>11599</size>
+    <filedate>1322231140</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>defaultconfig 7.x-1.0-alpha3</name>
+  <version>7.x-1.0-alpha3</version>
+  <tag>7.x-1.0-alpha3</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>alpha3</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1319848</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha3.tar.gz</download_link>
+  <date>1319474130</date>
+  <mdhash>eeba3c87962727ebecb374ee2c8b3b80</mdhash>
+  <filesize>10165</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>eeba3c87962727ebecb374ee2c8b3b80</md5>
+    <size>10165</size>
+    <filedate>1319474130</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>23b0951d841fc7c7c0a0f7c2a651ae59</md5>
+    <size>11447</size>
+    <filedate>1319474130</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>defaultconfig 7.x-1.0-alpha2</name>
+  <version>7.x-1.0-alpha2</version>
+  <tag>7.x-1.0-alpha2</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>alpha2</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1288164</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha2.tar.gz</download_link>
+  <date>1316730101</date>
+  <mdhash>edb2ccd5efb67b51aef30bf8303f71a2</mdhash>
+  <filesize>9877</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>edb2ccd5efb67b51aef30bf8303f71a2</md5>
+    <size>9877</size>
+    <filedate>1316730101</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>47f224df46d75e2bbf0dab5e57e289d4</md5>
+    <size>11150</size>
+    <filedate>1316730101</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>defaultconfig 7.x-1.0-alpha1</name>
+  <version>7.x-1.0-alpha1</version>
+  <tag>7.x-1.0-alpha1</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>alpha1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1254240</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha1.tar.gz</download_link>
+  <date>1313758315</date>
+  <mdhash>e470d8b1d13f952dd7aae2fb09a7ea9b</mdhash>
+  <filesize>8486</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>e470d8b1d13f952dd7aae2fb09a7ea9b</md5>
+    <size>8486</size>
+    <filedate>1313758315</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.0-alpha1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>f848d19d686de2157e1700b35fb68694</md5>
+    <size>9757</size>
+    <filedate>1313758315</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>defaultconfig 7.x-1.x-dev</name>
+  <version>7.x-1.x-dev</version>
+  <tag>7.x-1.x</tag>
+  <version_major>1</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1254242</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.x-dev.tar.gz</download_link>
+  <date>1396615150</date>
+  <mdhash>e4393df69b64baeb12c7432f0561876c</mdhash>
+  <filesize>14779</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>e4393df69b64baeb12c7432f0561876c</md5>
+    <size>14779</size>
+    <filedate>1396615150</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/defaultconfig-7.x-1.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>a12f8e2309354e1278bda62c5f5bcfa2</md5>
+    <size>16975</size>
+    <filedate>1396615150</filedate>
+   </file>
+  </files>
+ </release>
+</releases>
+</project>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Login redirect</title>
+<short_name>login_redirect</short_name>
+<dc:creator>Jeffrey C.</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<recommended_major>1</recommended_major>
+<supported_majors>1</supported_majors>
+<default_major>1</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/login_redirect</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Seeking co-maintainer(s)</value></term>
+   <term><name>Development status</name><value>Under active development</value></term>
+   <term><name>Module categories</name><value>User Access &amp; Authentication</value></term>
+   <term><name>Module categories</name><value>User Management</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>login_redirect 7.x-1.2</name>
+  <version>7.x-1.2</version>
+  <tag>7.x-1.2</tag>
+  <version_major>1</version_major>
+  <version_patch>2</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2251259</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.2.tar.gz</download_link>
+  <date>1398584327</date>
+  <mdhash>1070691fc4ba24e30448f5ed92fa248d</mdhash>
+  <filesize>9266</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>1070691fc4ba24e30448f5ed92fa248d</md5>
+    <size>9266</size>
+    <filedate>1398584327</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>87f8e53a06a2f101fdfe7e21f9a434e1</md5>
+    <size>11015</size>
+    <filedate>1398584327</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>login_redirect 7.x-1.1</name>
+  <version>7.x-1.1</version>
+  <tag>7.x-1.1</tag>
+  <version_major>1</version_major>
+  <version_patch>1</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1837584</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.1.tar.gz</download_link>
+  <date>1352622112</date>
+  <mdhash>4bcfe0126204e858445c1dbc3235d492</mdhash>
+  <filesize>9273</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>4bcfe0126204e858445c1dbc3235d492</md5>
+    <size>9273</size>
+    <filedate>1352622112</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>5e288f4db7dd7f9bc0b07bcd64ff8170</md5>
+    <size>11012</size>
+    <filedate>1352622112</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>login_redirect 7.x-1.0</name>
+  <version>7.x-1.0</version>
+  <tag>7.x-1.0</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1702324</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.0.tar.gz</download_link>
+  <date>1343372623</date>
+  <mdhash>1897a4b9b49f93d2cefe71572b4dfe43</mdhash>
+  <filesize>9324</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.0.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>1897a4b9b49f93d2cefe71572b4dfe43</md5>
+    <size>9324</size>
+    <filedate>1343372623</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.0.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>5bacebde1666f498f9a0e59e764be97b</md5>
+    <size>10991</size>
+    <filedate>1343372623</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>login_redirect 7.x-1.x-dev</name>
+  <version>7.x-1.x-dev</version>
+  <tag>7.x-1.x</tag>
+  <version_major>1</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1702310</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.x-dev.tar.gz</download_link>
+  <date>1398584028</date>
+  <mdhash>ae4d52bf7c3036c7e70ec0bdd699a13c</mdhash>
+  <filesize>9271</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>ae4d52bf7c3036c7e70ec0bdd699a13c</md5>
+    <size>9271</size>
+    <filedate>1398584028</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/login_redirect-7.x-1.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>4b7622a4e92d8b59266f7033921bd0da</md5>
+    <size>11016</size>
+    <filedate>1398584028</filedate>
+   </file>
+  </files>
+ </release>
+</releases>
+</project>

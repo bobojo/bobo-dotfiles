@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Wysiwyg API template plugin</title>
+<short_name>wysiwyg_template</short_name>
+<dc:creator>jenlampton</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<recommended_major>2</recommended_major>
+<supported_majors>2</supported_majors>
+<default_major>2</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/wysiwyg_template</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Actively maintained</value></term>
+   <term><name>Development status</name><value>Under active development</value></term>
+   <term><name>Module categories</name><value>Administration</value></term>
+   <term><name>Module categories</name><value>Content</value></term>
+   <term><name>Module categories</name><value>Filters/Editors</value></term>
+   <term><name>Module categories</name><value>Third-party Integration</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>wysiwyg_template 7.x-2.11</name>
+  <version>7.x-2.11</version>
+  <tag>7.x-2.11</tag>
+  <version_major>2</version_major>
+  <version_patch>11</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2214919</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.11.tar.gz</download_link>
+  <date>1394471605</date>
+  <mdhash>dee8bcf5f1082ebd53f0b8d9639d8071</mdhash>
+  <filesize>16463</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.11.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>dee8bcf5f1082ebd53f0b8d9639d8071</md5>
+    <size>16463</size>
+    <filedate>1394471605</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.11.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>dae7db9a5721508e9a0870c560216db3</md5>
+    <size>18640</size>
+    <filedate>1394471605</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.10</name>
+  <version>7.x-2.10</version>
+  <tag>7.x-2.10</tag>
+  <version_major>2</version_major>
+  <version_patch>10</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2112907</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.10.tar.gz</download_link>
+  <date>1381912313</date>
+  <mdhash>061730451817c7f885077efd74e83095</mdhash>
+  <filesize>14130</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.10.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>061730451817c7f885077efd74e83095</md5>
+    <size>14130</size>
+    <filedate>1381912313</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.10.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>84d1f0a0c36c13d98b6557c12d8cc780</md5>
+    <size>16401</size>
+    <filedate>1381912314</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.9</name>
+  <version>7.x-2.9</version>
+  <tag>7.x-2.9</tag>
+  <version_major>2</version_major>
+  <version_patch>9</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1821774</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.9.tar.gz</download_link>
+  <date>1351080434</date>
+  <mdhash>6b95f79e215b77d9d47cd44ed8922375</mdhash>
+  <filesize>14046</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.9.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6b95f79e215b77d9d47cd44ed8922375</md5>
+    <size>14046</size>
+    <filedate>1351080434</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.9.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>ef49b6772d78275d117aa5baa3a6736f</md5>
+    <size>16317</size>
+    <filedate>1351080434</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.8</name>
+  <version>7.x-2.8</version>
+  <tag>7.x-2.8</tag>
+  <version_major>2</version_major>
+  <version_patch>8</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1783514</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.8.tar.gz</download_link>
+  <date>1347551764</date>
+  <mdhash>0e974fc77e4c74e39264a871bff4c295</mdhash>
+  <filesize>14031</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.8.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>0e974fc77e4c74e39264a871bff4c295</md5>
+    <size>14031</size>
+    <filedate>1347551764</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.8.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>1023150145645d4cef2d8822e0865023</md5>
+    <size>16295</size>
+    <filedate>1347551764</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.7</name>
+  <version>7.x-2.7</version>
+  <tag>7.x-2.7</tag>
+  <version_major>2</version_major>
+  <version_patch>7</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1736566</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.7.tar.gz</download_link>
+  <date>1345213945</date>
+  <mdhash>98215f98d92845d53b46b80b5d66d753</mdhash>
+  <filesize>13175</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.7.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>98215f98d92845d53b46b80b5d66d753</md5>
+    <size>13175</size>
+    <filedate>1345213945</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.7.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>a8ab0e54163f29939884d1331e50d57b</md5>
+    <size>15436</size>
+    <filedate>1345213945</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.6</name>
+  <version>7.x-2.6</version>
+  <tag>7.x-2.6</tag>
+  <version_major>2</version_major>
+  <version_patch>6</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1374906</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.6.tar.gz</download_link>
+  <date>1324214444</date>
+  <mdhash>20f7610f8c2d454f4c1e183f53486dfe</mdhash>
+  <filesize>12732</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.6.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>20f7610f8c2d454f4c1e183f53486dfe</md5>
+    <size>12732</size>
+    <filedate>1324214444</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.6.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>a48b0df775e267b36a9d9ca93622669a</md5>
+    <size>14592</size>
+    <filedate>1324214444</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.5</name>
+  <version>7.x-2.5</version>
+  <tag>7.x-2.5</tag>
+  <version_major>2</version_major>
+  <version_patch>5</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1263108</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.5.tar.gz</download_link>
+  <date>1314612724</date>
+  <mdhash>acf552f4112202110b8226c594a535bb</mdhash>
+  <filesize>10344</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.5.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>acf552f4112202110b8226c594a535bb</md5>
+    <size>10344</size>
+    <filedate>1314612724</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.5.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>bae7aac38b498be3f25d7c5b2a021fcc</md5>
+    <size>12055</size>
+    <filedate>1314612724</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.4</name>
+  <version>7.x-2.4</version>
+  <tag>7.x-2.4</tag>
+  <version_major>2</version_major>
+  <version_patch>4</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1191628</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.4.tar.gz</download_link>
+  <date>1308310625</date>
+  <mdhash>44ef8b0be6f43ae059ffea972ab50fe6</mdhash>
+  <filesize>10325</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.4.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>44ef8b0be6f43ae059ffea972ab50fe6</md5>
+    <size>10325</size>
+    <filedate>1308310625</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.4.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>c030cf7d49cbd45d31bc98d98069f222</md5>
+    <size>12039</size>
+    <filedate>1308310625</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.3</name>
+  <version>7.x-2.3</version>
+  <tag>7.x-2.3</tag>
+  <version_major>2</version_major>
+  <version_patch>3</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1178532</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.3.tar.gz</download_link>
+  <date>1307184421</date>
+  <mdhash>6ac6d9cd397942d544d6eac39373adf2</mdhash>
+  <filesize>10317</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6ac6d9cd397942d544d6eac39373adf2</md5>
+    <size>10317</size>
+    <filedate>1307184421</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>e27c2234a49397dacfe4a4150bd96f7f</md5>
+    <size>12036</size>
+    <filedate>1307184421</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.2-beta1</name>
+  <version>7.x-2.2-beta1</version>
+  <tag>7.x-2.2-beta1</tag>
+  <version_major>2</version_major>
+  <version_patch>2</version_patch>
+  <version_extra>beta1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1107670</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.2-beta1.tar.gz</download_link>
+  <date>1301298070</date>
+  <mdhash>592e407f8c0f781a5da9cf4c37950e59</mdhash>
+  <filesize>10226</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.2-beta1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>592e407f8c0f781a5da9cf4c37950e59</md5>
+    <size>10226</size>
+    <filedate>1301298070</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.2-beta1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>cc91942470d565562c13a1977c0c573c</md5>
+    <size>11922</size>
+    <filedate>1301298070</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.1-beta1</name>
+  <version>7.x-2.1-beta1</version>
+  <tag>7.x-2.1-beta1</tag>
+  <version_major>2</version_major>
+  <version_patch>1</version_patch>
+  <version_extra>beta1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1091142</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.1-beta1.tar.gz</download_link>
+  <date>1300036870</date>
+  <mdhash>c1b4ee5a05adada1b30ab8a18491a134</mdhash>
+  <filesize>10227</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.1-beta1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>c1b4ee5a05adada1b30ab8a18491a134</md5>
+    <size>10227</size>
+    <filedate>1300036870</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.1-beta1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>f1a6151282eb26b25029ad45649b92fe</md5>
+    <size>11929</size>
+    <filedate>1300036870</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.0-beta1</name>
+  <version>7.x-2.0-beta1</version>
+  <tag>7.x-2.0-beta1</tag>
+  <version_major>2</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1084228</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.0-beta1.tar.gz</download_link>
+  <date>1299526870</date>
+  <mdhash>eff1a9bf9306ff02c585838a5b5dd5da</mdhash>
+  <filesize>10257</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.0-beta1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>eff1a9bf9306ff02c585838a5b5dd5da</md5>
+    <size>10257</size>
+    <filedate>1299526870</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.0-beta1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>19278a01e50a6f00c538150efeb87963</md5>
+    <size>11945</size>
+    <filedate>1299526870</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>wysiwyg_template 7.x-2.x-dev</name>
+  <version>7.x-2.x-dev</version>
+  <tag>7.x-2.x</tag>
+  <version_major>2</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1139804</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.x-dev.tar.gz</download_link>
+  <date>1406793527</date>
+  <mdhash>e711166f67775b4b20c6090d4b7994f7</mdhash>
+  <filesize>16606</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>e711166f67775b4b20c6090d4b7994f7</md5>
+    <size>16606</size>
+    <filedate>1406793527</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/wysiwyg_template-7.x-2.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>db0865bce6edb7e303754d08bafc253e</md5>
+    <size>18816</size>
+    <filedate>1406793527</filedate>
+   </file>
+  </files>
+ </release>
+</releases>
+</project>

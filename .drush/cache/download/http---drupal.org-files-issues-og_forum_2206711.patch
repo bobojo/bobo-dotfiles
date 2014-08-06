@@ -1,0 +1,49 @@
+diff --git a/og_forum.info b/og_forum.info
+index 95ea330..ead7da5 100644
+--- a/og_forum.info
++++ b/og_forum.info
+@@ -4,5 +4,4 @@ core = 7.x
+ package = "Organic groups"
+ 
+ dependencies[] = og
+-dependencies[] = og_access
+ dependencies[] = forum
+diff --git a/og_forum.install b/og_forum.install
+index 9d77dc2..930378d 100644
+--- a/og_forum.install
++++ b/og_forum.install
+@@ -16,5 +16,7 @@ function og_forum_install() {
+ 
+   // Add group audience and group visibility to topic.
+   og_create_field(OG_AUDIENCE_FIELD, 'node', 'forum');
+-  og_create_field(OG_CONTENT_ACCESS_FIELD, 'node', 'forum');
++  if (module_exists('og_access')) {
++    og_create_field(OG_CONTENT_ACCESS_FIELD, 'node', 'forum');
++  }
+ }
+diff --git a/og_forum.module b/og_forum.module
+index 032d058..7756263 100644
+--- a/og_forum.module
++++ b/og_forum.module
+@@ -140,7 +140,9 @@ function og_forum_node_presave($node) {
+         }
+       }
+     }
+-    $node->{OG_CONTENT_ACCESS_FIELD}[LANGUAGE_NONE][0]['value'] = 2;
++    if (module_exists('og_access')) {
++      $node->{OG_CONTENT_ACCESS_FIELD}[LANGUAGE_NONE][0]['value'] = 2;
++    }
+   }
+ }
+ 
+@@ -152,7 +154,9 @@ function og_forum_node_presave($node) {
+ function og_forum_form_forum_node_form_alter(&$form, &$form_state) {
+ 
+   $form[OG_AUDIENCE_FIELD]['#type'] = 'hidden';
+-  $form[OG_CONTENT_ACCESS_FIELD]['#type'] = 'hidden';
++  if (module_exists('og_access')) {
++    $form[OG_CONTENT_ACCESS_FIELD]['#type'] = 'hidden';
++  }
+ }
+ 
+ /**

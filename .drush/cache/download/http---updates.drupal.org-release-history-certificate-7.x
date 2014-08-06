@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Certificate</title>
+<short_name>certificate</short_name>
+<dc:creator>scottrigby</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<recommended_major>2</recommended_major>
+<supported_majors>2</supported_majors>
+<default_major>2</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/certificate</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Actively maintained</value></term>
+   <term><name>Development status</name><value>Under active development</value></term>
+   <term><name>Module categories</name><value>Education</value></term>
+   <term><name>Module categories</name><value>Evaluation/Rating</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>certificate 7.x-2.0</name>
+  <version>7.x-2.0</version>
+  <tag>7.x-2.0</tag>
+  <version_major>2</version_major>
+  <version_patch>0</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2129727</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/certificate-7.x-2.0.tar.gz</download_link>
+  <date>1383803606</date>
+  <mdhash>0b8aeee00bea46e61321466b4d83604e</mdhash>
+  <filesize>22325</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.0.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>0b8aeee00bea46e61321466b4d83604e</md5>
+    <size>22325</size>
+    <filedate>1383803606</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.0.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>cfee547df36d8a79703a5b74f11f2391</md5>
+    <size>29126</size>
+    <filedate>1383803606</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>certificate 7.x-2.0-beta4</name>
+  <version>7.x-2.0-beta4</version>
+  <tag>7.x-2.0-beta4</tag>
+  <version_major>2</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta4</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1972966</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta4.tar.gz</download_link>
+  <date>1366216518</date>
+  <mdhash>774072e572c6b9eb6d2b2a2804b5877b</mdhash>
+  <filesize>22241</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta4.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>774072e572c6b9eb6d2b2a2804b5877b</md5>
+    <size>22241</size>
+    <filedate>1366216518</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta4.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>9ec81421e7366965a80b2ec97385ae74</md5>
+    <size>28772</size>
+    <filedate>1366216518</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>certificate 7.x-2.0-beta3</name>
+  <version>7.x-2.0-beta3</version>
+  <tag>7.x-2.0-beta3</tag>
+  <version_major>2</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta3</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1890348</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta3.tar.gz</download_link>
+  <date>1358355312</date>
+  <mdhash>485443297a23c792743a325512c6ad57</mdhash>
+  <filesize>22076</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>485443297a23c792743a325512c6ad57</md5>
+    <size>22076</size>
+    <filedate>1358355312</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>20bcdd751b0fde35ec15fbc1d7fb7b69</md5>
+    <size>28732</size>
+    <filedate>1358355312</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>certificate 7.x-2.0-beta2</name>
+  <version>7.x-2.0-beta2</version>
+  <tag>7.x-2.0-beta2</tag>
+  <version_major>2</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta2</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1870662</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta2.tar.gz</download_link>
+  <date>1355953557</date>
+  <mdhash>93aa2f8b81a0583ff8a5a96ded32e08b</mdhash>
+  <filesize>21358</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>93aa2f8b81a0583ff8a5a96ded32e08b</md5>
+    <size>21358</size>
+    <filedate>1355953557</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>00e7c8930e8f577f77aa457a4a5a4c66</md5>
+    <size>27868</size>
+    <filedate>1355953557</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>certificate 7.x-2.0-beta1</name>
+  <version>7.x-2.0-beta1</version>
+  <tag>7.x-2.0-beta1</tag>
+  <version_major>2</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1862880</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta1.tar.gz</download_link>
+  <date>1355149556</date>
+  <mdhash>1f8e24a073f2d6d677246f15dff7d805</mdhash>
+  <filesize>21371</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>1f8e24a073f2d6d677246f15dff7d805</md5>
+    <size>21371</size>
+    <filedate>1355149556</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.0-beta1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>ca15ebabffad7b9881879119c96c0683</md5>
+    <size>27883</size>
+    <filedate>1355149556</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>certificate 7.x-2.x-dev</name>
+  <version>7.x-2.x-dev</version>
+  <tag>7.x-2.x</tag>
+  <version_major>2</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1813658</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/certificate-7.x-2.x-dev.tar.gz</download_link>
+  <date>1402517327</date>
+  <mdhash>9a717b40963b96a7e37cb71697dc94f1</mdhash>
+  <filesize>22686</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>9a717b40963b96a7e37cb71697dc94f1</md5>
+    <size>22686</size>
+    <filedate>1402517327</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/certificate-7.x-2.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>693e8550cccdeca3525bc70afd85716f</md5>
+    <size>29628</size>
+    <filedate>1402517327</filedate>
+   </file>
+  </files>
+ </release>
+</releases>
+</project>

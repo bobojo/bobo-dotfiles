@@ -1,0 +1,18 @@
+diff --git a/og_forum.module b/og_forum.module
+index 032d058..7274a9d 100644
+--- a/og_forum.module
++++ b/og_forum.module
+@@ -109,10 +109,10 @@ function og_forum_query_term_access_alter(QueryAlterableInterface $query) {
+                                           ':field_name' => 'og_group_access',
+                                         ));
+       $condition = db_or();
+-      $condition->isNull($audience_alias . '.group_audience_gid');
++      $condition->isNull($audience_alias . '.gid');
+ 
+       if (!empty($group_gids)) {
+-        $condition->condition($audience_alias . '.group_audience_gid', $group_gids, 'IN');
++        $condition->condition($audience_alias . '.gid', $group_gids, 'IN');
+       }
+ 
+       $query->condition($condition);
+

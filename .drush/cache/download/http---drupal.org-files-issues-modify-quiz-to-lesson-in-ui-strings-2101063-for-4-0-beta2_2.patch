@@ -1,0 +1,15 @@
+diff --git a/quiz.module b/quiz.module
+old mode 100644
+new mode 100755
+index aa61a7e..aa64c37
+--- a/quiz.module
++++ b/quiz.module
+@@ -1024,7 +1024,7 @@ function quiz_view($node, $view_mode) {
+       // Add a link to the take tab if this is a teaser view.
+       else {
+         $node->content['take'] = array(
+-          '#markup' =>  l(t('Start quiz'), 'node/' . $node->nid . '/take'),
++          '#markup' =>  l(t('Start lesson'), 'node/' . $node->nid . '/take'),
+           '#weight' => 2,
+         );
+       }

@@ -1,0 +1,23 @@
+diff --git a/question_types/quiz_question/quiz_question.module b/question_types/quiz_question/quiz_question.module
+index 4b2405f..4c50e3c 100644
+--- a/question_types/quiz_question/quiz_question.module
++++ b/question_types/quiz_question/quiz_question.module
+@@ -180,11 +180,13 @@ function quiz_question_answering_form($form, $form_state, $node, $include_nid_in
+   );
+ 
+   if ($is_last) {
+-  	$form['#attributes']['class'][] = 'confirm';
+-  	$form['#attributes']['data-confirm-message'] = t('By proceeding you won\'t be able to go back and edit your answers');
+-  	$form['#attached'] = array(
+-      'js' => array(drupal_get_path('module', 'quiz') . '/theme/quiz_confirm.js'),
+-  	);
++    if (!((isset($quiz->quiz_type[LANGUAGE_NONE][0]['value'])) && ($quiz->quiz_type[LANGUAGE_NONE][0]['value'] == 'theory'))) {
++      $form['#attributes']['class'][] = 'confirm';
++      $form['#attributes']['data-confirm-message'] = t('By proceeding you won\'t be able to go back and edit your answers');
++      $form['#attached'] = array(
++        'js' => array(drupal_get_path('module', 'quiz') . '/theme/quiz_confirm.js'),
++      );
++    }
+   }
+   if ($quiz->allow_skipping) {
+     $form['navigation']['op']  = array(

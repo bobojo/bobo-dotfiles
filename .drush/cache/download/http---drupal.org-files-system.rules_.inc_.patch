@@ -1,0 +1,69 @@
+diff --git a/modules/system.rules.inc b/modules/system.rules.inc
+index fcd4f80..0bbc498 100644
+--- a/modules/system.rules.inc
++++ b/modules/system.rules.inc
+@@ -94,7 +94,7 @@ function _rules_system_watchdog_log_entry_info() {
+  * Implements hook_rules_action_info() on behalf of the system module.
+  */
+ function rules_system_action_info() {
+-  return array(
++  $actions = array(
+     'drupal_message' => array(
+       'label' => t('Show a message on the site'),
+       'group' => t('System'),
+@@ -243,6 +243,55 @@ function rules_system_action_info() {
+       'access callback' => 'rules_system_integration_access',
+     ),
+   );
++  foreach (array('text', 'array', 'object', 'unknown') as $type) {
++    $actions["get_system_{$type}_variable"] = array(
++      'label' => t("Get system variable of type '!type'", array('!type' => $type)),
++      'group' => t('System'),
++      'parameter' => array(
++        'variable' => array(
++          'type' => 'text',
++          'label' => t('Variable'),
++          'description' => t('Select the variable name'),
++        ),
++      ),
++      'base' => "rules_get_system_{$type}_variable",
++      'provides' => array(
++        'variable_added' => array(
++          'type' => $type,
++          'label' => t('Added variable'),
++        ),
++      ),
++    );
++  }
++  return $actions;
++}
++
++/**
++ * Fetch variable of type text.
++ */
++function rules_get_system_text_variable($variable) {
++  return array('variable_added' => (string) variable_get($variable));
++}
++
++/**
++ * Fetch variable of type array.
++ */
++function rules_get_system_array_variable($variable) {
++  return array('variable_added' => (array) variable_get($variable));
++}
++
++/**
++ * Fetch variable of type object.
++ */
++function rules_get_system_object_variable($variable) {
++  return array('variable_added' => (object) variable_get($variable));
++}
++
++/**
++ * Fetch variable of unknown type.
++ */
++function rules_get_system_unknown_variable($variable) {
++  return array('variable_added' => variable_get($variable));
+ }
+ 
+ /**

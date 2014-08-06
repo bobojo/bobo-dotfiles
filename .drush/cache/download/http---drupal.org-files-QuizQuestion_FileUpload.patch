@@ -1,0 +1,14 @@
+diff --git a/question_types/quiz_question/quiz_question.module b/question_types/quiz_question/quiz_question.module
+index 2c32071..796218c 100644
+--- a/question_types/quiz_question/quiz_question.module
++++ b/question_types/quiz_question/quiz_question.module
+@@ -227,6 +227,9 @@ function quiz_question_evaluate_question($question, $result_id, $answer = NULL)
+     // FIXME this use of POST array is hacky. We will try to use FAPI mor accurately in Quiz 5.x
+     $answer = $_POST['tries'];
+   }
++  if (empty($answer) && isset($_FILES['files']['type']['tries']) && !empty($_FILES['files']['type']['tries'])) {
++    $answer = $_FILES;
++  }
+   unset($_POST['tries']);
+   $response = _quiz_question_response_get_instance($result_id, $question, $answer);
+ 

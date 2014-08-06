@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>User Import</title>
+<short_name>user_import</short_name>
+<dc:creator>Robert Castelo</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<recommended_major>2</recommended_major>
+<supported_majors>1,2</supported_majors>
+<default_major>1</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/user_import</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Actively maintained</value></term>
+   <term><name>Development status</name><value>Under active development</value></term>
+   <term><name>Module categories</name><value>Import/Export</value></term>
+   <term><name>Module categories</name><value>User Access &amp; Authentication</value></term>
+   <term><name>Module categories</name><value>User Management</value></term>
+   <term><name>Module categories</name><value>Utility</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>user_import 7.x-2.2</name>
+  <version>7.x-2.2</version>
+  <tag>7.x-2.2</tag>
+  <version_major>2</version_major>
+  <version_patch>2</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2213875</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-2.2.tar.gz</download_link>
+  <date>1394331205</date>
+  <mdhash>fd5eb1337c12c7654d4149f7fbe96fc6</mdhash>
+  <filesize>45369</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-2.2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>fd5eb1337c12c7654d4149f7fbe96fc6</md5>
+    <size>45369</size>
+    <filedate>1394331205</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-2.2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>107674e61ed32ece2b782bad9bc79df7</md5>
+    <size>53623</size>
+    <filedate>1394331205</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>user_import 7.x-2.1</name>
+  <version>7.x-2.1</version>
+  <tag>7.x-2.1</tag>
+  <version_major>2</version_major>
+  <version_patch>1</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2062819</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-2.1.tar.gz</download_link>
+  <date>1376260694</date>
+  <mdhash>51dec224c95afde3ef27d2730b8852e0</mdhash>
+  <filesize>45598</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-2.1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>51dec224c95afde3ef27d2730b8852e0</md5>
+    <size>45598</size>
+    <filedate>1376260694</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-2.1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>8750055f4dd02b2c242da859621e895e</md5>
+    <size>53427</size>
+    <filedate>1376260694</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>user_import 7.x-2.0-beta1</name>
+  <version>7.x-2.0-beta1</version>
+  <tag>7.x-2.0-beta1</tag>
+  <version_major>2</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2053507</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-2.0-beta1.tar.gz</download_link>
+  <date>1375171894</date>
+  <mdhash>a23f3c01623d5dfe78e0eccdc3bd357e</mdhash>
+  <filesize>45121</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-2.0-beta1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>a23f3c01623d5dfe78e0eccdc3bd357e</md5>
+    <size>45121</size>
+    <filedate>1375171894</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-2.0-beta1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>eb37187c1691197d765b9828dd19ebc1</md5>
+    <size>52953</size>
+    <filedate>1375171894</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>user_import 7.x-1.1</name>
+  <version>7.x-1.1</version>
+  <tag>7.x-1.1</tag>
+  <version_major>1</version_major>
+  <version_patch>1</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2042319</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-1.1.tar.gz</download_link>
+  <date>1373899580</date>
+  <mdhash>850ac7243b1cf66348263953da1974b1</mdhash>
+  <filesize>42940</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>850ac7243b1cf66348263953da1974b1</md5>
+    <size>42940</size>
+    <filedate>1373899580</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>71602b80292e72f7900dfa254e6af0a0</md5>
+    <size>50487</size>
+    <filedate>1373899580</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>user_import 7.x-1.0-beta6</name>
+  <version>7.x-1.0-beta6</version>
+  <tag>7.x-1.0-beta6</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta6</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1957264</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta6.tar.gz</download_link>
+  <date>1364698230</date>
+  <mdhash>604819f2e89accec6fd1af3a5e2c9e97</mdhash>
+  <filesize>42523</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta6.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>604819f2e89accec6fd1af3a5e2c9e97</md5>
+    <size>42523</size>
+    <filedate>1364698230</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta6.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>9c7b4894734815223ce6eefd79e12eda</md5>
+    <size>50133</size>
+    <filedate>1364698230</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>user_import 7.x-1.0-beta5</name>
+  <version>7.x-1.0-beta5</version>
+  <tag>7.x-1.0-beta5</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta5</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1895134</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta5.tar.gz</download_link>
+  <date>1358822934</date>
+  <mdhash>299e802f637d08d4eefa38cbdc14efdd</mdhash>
+  <filesize>42777</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta5.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>299e802f637d08d4eefa38cbdc14efdd</md5>
+    <size>42777</size>
+    <filedate>1358822934</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta5.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>90257c6d0b09927b70055a0226d92b40</md5>
+    <size>50294</size>
+    <filedate>1358822934</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>user_import 7.x-1.0-beta4</name>
+  <version>7.x-1.0-beta4</version>
+  <tag>7.x-1.0-beta4</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta4</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1880040</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta4.tar.gz</download_link>
+  <date>1357308311</date>
+  <mdhash>a175bb277113205ba599cedcf25c18c5</mdhash>
+  <filesize>42592</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta4.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>a175bb277113205ba599cedcf25c18c5</md5>
+    <size>42592</size>
+    <filedate>1357308311</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta4.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>595af94e1acb92d9317608ee0667283c</md5>
+    <size>50100</size>
+    <filedate>1357308311</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>user_import 7.x-1.0-beta3</name>
+  <version>7.x-1.0-beta3</version>
+  <tag>7.x-1.0-beta3</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta3</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1880014</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta3.tar.gz</download_link>
+  <date>1357307397</date>
+  <mdhash>4fb3eac2f7cbe6d1b28d5198fde4aadf</mdhash>
+  <filesize>42575</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>4fb3eac2f7cbe6d1b28d5198fde4aadf</md5>
+    <size>42575</size>
+    <filedate>1357307397</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>9100ee6e912283f15b0dfb9eb1e47d4a</md5>
+    <size>50040</size>
+    <filedate>1357307397</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>user_import 7.x-1.0-beta2</name>
+  <version>7.x-1.0-beta2</version>
+  <tag>7.x-1.0-beta2</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta2</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1875808</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta2.tar.gz</download_link>
+  <date>1356724151</date>
+  <mdhash>c622f848a6063606f1ec08dc1cc05e11</mdhash>
+  <filesize>42626</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>c622f848a6063606f1ec08dc1cc05e11</md5>
+    <size>42626</size>
+    <filedate>1356724151</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>4e84da2519344b12f39b079629af37b6</md5>
+    <size>49808</size>
+    <filedate>1356724151</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>user_import 7.x-1.0-beta1</name>
+  <version>7.x-1.0-beta1</version>
+  <tag>7.x-1.0-beta1</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1821384</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta1.tar.gz</download_link>
+  <date>1351040539</date>
+  <mdhash>695ca6b123f9456612f3d42496838c49</mdhash>
+  <filesize>42824</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>695ca6b123f9456612f3d42496838c49</md5>
+    <size>42824</size>
+    <filedate>1351040539</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.0-beta1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>5e23f2e8bd80bdc00263db49f63afcfe</md5>
+    <size>50020</size>
+    <filedate>1351040539</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>user_import 7.x-2.x-dev</name>
+  <version>7.x-2.x-dev</version>
+  <tag>7.x-2.x</tag>
+  <version_major>2</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2053639</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-2.x-dev.tar.gz</download_link>
+  <date>1396140844</date>
+  <mdhash>f2c1afbb0dd4d911baf5273818728c1c</mdhash>
+  <filesize>45383</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-2.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>f2c1afbb0dd4d911baf5273818728c1c</md5>
+    <size>45383</size>
+    <filedate>1396140844</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-2.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>fb9c91ecf1b625de223c97c1cfd217c7</md5>
+    <size>53647</size>
+    <filedate>1396140844</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>user_import 7.x-1.x-dev</name>
+  <version>7.x-1.x-dev</version>
+  <tag>7.x-1.x</tag>
+  <version_major>1</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1811920</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/user_import-7.x-1.x-dev.tar.gz</download_link>
+  <date>1382150664</date>
+  <mdhash>ee401bf8bec9c0a913400dbb620686df</mdhash>
+  <filesize>45115</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>ee401bf8bec9c0a913400dbb620686df</md5>
+    <size>45115</size>
+    <filedate>1382150664</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/user_import-7.x-1.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>498552dce265664d604751797444bad4</md5>
+    <size>52949</size>
+    <filedate>1382150665</filedate>
+   </file>
+  </files>
+ </release>
+</releases>
+</project>

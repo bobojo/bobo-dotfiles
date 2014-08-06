@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Opigno Notifications App</title>
+<short_name>opigno_notifications_app</short_name>
+<dc:creator>wadmiraal</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<supported_majors>1</supported_majors>
+<default_major>1</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/opigno_notifications_app</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Actively maintained</value></term>
+   <term><name>Development status</name><value>Under active development</value></term>
+   <term><name>Module categories</name><value>Education</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>opigno_notifications_app 7.x-1.0-rc3</name>
+  <version>7.x-1.0-rc3</version>
+  <tag>7.x-1.0-rc3</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc3</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2094009</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.0-rc3.tar.gz</download_link>
+  <date>1379687938</date>
+  <mdhash>b46da43f0f99c4ac12aac9e5d80666f3</mdhash>
+  <filesize>12470</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.0-rc3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>b46da43f0f99c4ac12aac9e5d80666f3</md5>
+    <size>12470</size>
+    <filedate>1379687938</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.0-rc3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>0ee41816173d8288fe0b9cc03431a392</md5>
+    <size>14543</size>
+    <filedate>1379687939</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>opigno_notifications_app 7.x-1.0-rc2</name>
+  <version>7.x-1.0-rc2</version>
+  <tag>7.x-1.0-rc2</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc2</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2093929</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.0-rc2.tar.gz</download_link>
+  <date>1379681928</date>
+  <mdhash>6276a7ed7d8006c98b238b512fccd7bc</mdhash>
+  <filesize>12472</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.0-rc2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6276a7ed7d8006c98b238b512fccd7bc</md5>
+    <size>12472</size>
+    <filedate>1379681928</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.0-rc2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>95cfd58ed578e45432cdbfd25cfb6121</md5>
+    <size>14541</size>
+    <filedate>1379681928</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>opigno_notifications_app 7.x-1.0-rc1</name>
+  <version>7.x-1.0-rc1</version>
+  <tag>7.x-1.0-rc1</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2092985</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.0-rc1.tar.gz</download_link>
+  <date>1379593366</date>
+  <mdhash>ca51cc3a00687557d5363c1d600a7f92</mdhash>
+  <filesize>12475</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.0-rc1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>ca51cc3a00687557d5363c1d600a7f92</md5>
+    <size>12475</size>
+    <filedate>1379593366</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.0-rc1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>19f6d0941b7e09bf81986cd92110dae0</md5>
+    <size>14545</size>
+    <filedate>1379593367</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>opigno_notifications_app 7.x-1.x-dev</name>
+  <version>7.x-1.x-dev</version>
+  <tag>7.x-1.x</tag>
+  <version_major>1</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2086471</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.x-dev.tar.gz</download_link>
+  <date>1380621591</date>
+  <mdhash>126957d157b2467424a08194f9db2b99</mdhash>
+  <filesize>12477</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>126957d157b2467424a08194f9db2b99</md5>
+    <size>12477</size>
+    <filedate>1380621591</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_notifications_app-7.x-1.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>ec5261f221a8e72e836c65916dce36b9</md5>
+    <size>14547</size>
+    <filedate>1380621591</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+</releases>
+</project>

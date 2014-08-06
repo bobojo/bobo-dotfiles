@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Date Popup Authored</title>
+<short_name>date_popup_authored</short_name>
+<dc:creator>Mark Trapp</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<recommended_major>1</recommended_major>
+<supported_majors>1</supported_majors>
+<default_major>1</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/date_popup_authored</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Seeking new maintainer</value></term>
+   <term><name>Development status</name><value>No further development</value></term>
+   <term><name>Module categories</name><value>Administration</value></term>
+   <term><name>Module categories</name><value>Utility</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>date_popup_authored 7.x-1.1</name>
+  <version>7.x-1.1</version>
+  <tag>7.x-1.1</tag>
+  <version_major>1</version_major>
+  <version_patch>1</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1510342</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1.tar.gz</download_link>
+  <date>1333178146</date>
+  <mdhash>927e0aed80fa5ea12c2a3d408a1e2201</mdhash>
+  <filesize>11922</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>927e0aed80fa5ea12c2a3d408a1e2201</md5>
+    <size>11922</size>
+    <filedate>1333178146</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>8d219ac54bf7aec62d9e801eff0064c8</md5>
+    <size>14005</size>
+    <filedate>1333178146</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>date_popup_authored 7.x-1.1-beta2</name>
+  <version>7.x-1.1-beta2</version>
+  <tag>7.x-1.1-beta2</tag>
+  <version_major>1</version_major>
+  <version_patch>1</version_patch>
+  <version_extra>beta2</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1436588</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-beta2.tar.gz</download_link>
+  <date>1328921737</date>
+  <mdhash>fa465beb9d5d2f9a7050140f0810d230</mdhash>
+  <filesize>11937</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-beta2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>fa465beb9d5d2f9a7050140f0810d230</md5>
+    <size>11937</size>
+    <filedate>1328921737</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-beta2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>fe799605e18ec148287261d3f295eb76</md5>
+    <size>14061</size>
+    <filedate>1328921737</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>date_popup_authored 7.x-1.1-beta1</name>
+  <version>7.x-1.1-beta1</version>
+  <tag>7.x-1.1-beta1</tag>
+  <version_major>1</version_major>
+  <version_patch>1</version_patch>
+  <version_extra>beta1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1060112</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-beta1.tar.gz</download_link>
+  <date>1297580039</date>
+  <mdhash>26c4636855e6746cb43c1aff1df49580</mdhash>
+  <filesize>10805</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-beta1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>26c4636855e6746cb43c1aff1df49580</md5>
+    <size>10805</size>
+    <filedate>1297580039</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-beta1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>4db2f94a4fd54a9df55a321c85363acd</md5>
+    <size>13316</size>
+    <filedate>1297580039</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>date_popup_authored 7.x-1.1-alpha4</name>
+  <version>7.x-1.1-alpha4</version>
+  <tag>7.x-1.1-alpha4</tag>
+  <version_major>1</version_major>
+  <version_patch>1</version_patch>
+  <version_extra>alpha4</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/996610</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha4.tar.gz</download_link>
+  <date>1292223796</date>
+  <mdhash>6e365af4f34b7c4369ee36bf67dce974</mdhash>
+  <filesize>10740</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha4.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6e365af4f34b7c4369ee36bf67dce974</md5>
+    <size>10740</size>
+    <filedate>1292223796</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha4.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>8f99040065a71cbee0157530a9cdaedf</md5>
+    <size>13132</size>
+    <filedate>1293230647</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>date_popup_authored 7.x-1.1-alpha3</name>
+  <version>7.x-1.1-alpha3</version>
+  <tag>7.x-1.1-alpha3</tag>
+  <version_major>1</version_major>
+  <version_patch>1</version_patch>
+  <version_extra>alpha3</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/970674</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha3.tar.gz</download_link>
+  <date>1289638942</date>
+  <mdhash>7e995dda02d8ef8b855524dea750b910</mdhash>
+  <filesize>9383</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>7e995dda02d8ef8b855524dea750b910</md5>
+    <size>9383</size>
+    <filedate>1289638942</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>1e92034d92d417819b1de392063f917f</md5>
+    <size>11299</size>
+    <filedate>1293230646</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>date_popup_authored 7.x-1.1-alpha2</name>
+  <version>7.x-1.1-alpha2</version>
+  <tag>7.x-1.1-alpha2</tag>
+  <version_major>1</version_major>
+  <version_patch>1</version_patch>
+  <version_extra>alpha2</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/970462</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha2.tar.gz</download_link>
+  <date>1289605580</date>
+  <mdhash>89b89e5d8060bf90e39afff915197739</mdhash>
+  <filesize>9343</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>89b89e5d8060bf90e39afff915197739</md5>
+    <size>9343</size>
+    <filedate>1289605580</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>9881a63cf241145050e4184c416e4644</md5>
+    <size>11265</size>
+    <filedate>1293230647</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>date_popup_authored 7.x-1.1-alpha1</name>
+  <version>7.x-1.1-alpha1</version>
+  <tag>7.x-1.1-alpha1</tag>
+  <version_major>1</version_major>
+  <version_patch>1</version_patch>
+  <version_extra>alpha1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/964502</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha1.tar.gz</download_link>
+  <date>1289106340</date>
+  <mdhash>26f73aa8fedc8484be11bc7735c6919f</mdhash>
+  <filesize>9233</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>26f73aa8fedc8484be11bc7735c6919f</md5>
+    <size>9233</size>
+    <filedate>1289106340</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.1-alpha1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>b5e2ddf60bd5a1eff419d049621490f8</md5>
+    <size>11143</size>
+    <filedate>1293230647</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>date_popup_authored 7.x-1.x-dev</name>
+  <version>7.x-1.x-dev</version>
+  <tag>7.x-1.x</tag>
+  <version_major>1</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/964500</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.x-dev.tar.gz</download_link>
+  <date>1380568742</date>
+  <mdhash>d316b674be6ae6bcf371102c47b606be</mdhash>
+  <filesize>11962</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>d316b674be6ae6bcf371102c47b606be</md5>
+    <size>11962</size>
+    <filedate>1380568742</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/date_popup_authored-7.x-1.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>9e53e771ef6dbc94b2f71d3fd489bc27</md5>
+    <size>14181</size>
+    <filedate>1380568743</filedate>
+   </file>
+  </files>
+ </release>
+</releases>
+</project>

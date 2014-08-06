@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>OG Quiz</title>
+<short_name>og_quiz</short_name>
+<dc:creator>wadmiraal</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<supported_majors>1</supported_majors>
+<default_major>1</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/og_quiz</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Actively maintained</value></term>
+   <term><name>Development status</name><value>Under active development</value></term>
+   <term><name>Module categories</name><value>Education</value></term>
+   <term><name>Module categories</name><value>Organic Groups (OG)</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>og_quiz 7.x-1.1</name>
+  <version>7.x-1.1</version>
+  <tag>7.x-1.1</tag>
+  <version_major>1</version_major>
+  <version_patch>1</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2190385</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.1.tar.gz</download_link>
+  <date>1391704705</date>
+  <mdhash>0a50f8742866cc7cdccce182d481cdce</mdhash>
+  <filesize>24755</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>0a50f8742866cc7cdccce182d481cdce</md5>
+    <size>24755</size>
+    <filedate>1391704705</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>4c3b7f3cffafd994455185395bf6c533</md5>
+    <size>28339</size>
+    <filedate>1391704705</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>og_quiz 7.x-1.0</name>
+  <version>7.x-1.0</version>
+  <tag>7.x-1.0</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2175831</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0.tar.gz</download_link>
+  <date>1389971611</date>
+  <mdhash>6a8fec8275b0cdb972ab986c172af440</mdhash>
+  <filesize>24681</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6a8fec8275b0cdb972ab986c172af440</md5>
+    <size>24681</size>
+    <filedate>1389971611</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>f2067cf924f59895224ca8c1096e801a</md5>
+    <size>28276</size>
+    <filedate>1389971611</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>og_quiz 7.x-1.0-beta6</name>
+  <version>7.x-1.0-beta6</version>
+  <tag>7.x-1.0-beta6</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta6</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2094115</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta6.tar.gz</download_link>
+  <date>1379694487</date>
+  <mdhash>7cbb1001b4c8de35ea64352e272837c8</mdhash>
+  <filesize>24605</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta6.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>7cbb1001b4c8de35ea64352e272837c8</md5>
+    <size>24605</size>
+    <filedate>1379694487</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta6.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>8edb120267b9cb88928e3a0dc8006af2</md5>
+    <size>28066</size>
+    <filedate>1379694487</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>og_quiz 7.x-1.0-beta5</name>
+  <version>7.x-1.0-beta5</version>
+  <tag>7.x-1.0-beta5</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta5</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2093833</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta5.tar.gz</download_link>
+  <date>1379674069</date>
+  <mdhash>f7415c1b3e25160d0d2ff6b1a3f6da8f</mdhash>
+  <filesize>24429</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta5.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>f7415c1b3e25160d0d2ff6b1a3f6da8f</md5>
+    <size>24429</size>
+    <filedate>1379674069</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta5.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>611c426d36f030af46bb21623144cc2a</md5>
+    <size>27957</size>
+    <filedate>1379674069</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>og_quiz 7.x-1.0-beta4</name>
+  <version>7.x-1.0-beta4</version>
+  <tag>7.x-1.0-beta4</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta4</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2084657</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta4.tar.gz</download_link>
+  <date>1378710426</date>
+  <mdhash>647322d1482dbdd694073c61cf428eb4</mdhash>
+  <filesize>24367</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta4.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>647322d1482dbdd694073c61cf428eb4</md5>
+    <size>24367</size>
+    <filedate>1378710426</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta4.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>3b345877c2ddfbe769c5b1f59925842f</md5>
+    <size>27899</size>
+    <filedate>1378710426</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>og_quiz 7.x-1.0-beta3</name>
+  <version>7.x-1.0-beta3</version>
+  <tag>7.x-1.0-beta3</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta3</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2076781</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta3.tar.gz</download_link>
+  <date>1377769908</date>
+  <mdhash>d03abf9adb41163c71e9ac8eaab016a0</mdhash>
+  <filesize>21039</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>d03abf9adb41163c71e9ac8eaab016a0</md5>
+    <size>21039</size>
+    <filedate>1377769908</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>1f27d1cc61858ee67c11f14160d54cca</md5>
+    <size>23115</size>
+    <filedate>1377769908</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>og_quiz 7.x-1.0-beta2</name>
+  <version>7.x-1.0-beta2</version>
+  <tag>7.x-1.0-beta2</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta2</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2076689</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta2.tar.gz</download_link>
+  <date>1377763031</date>
+  <mdhash>8f28e4932c33cf70c268fa2ccc414e7b</mdhash>
+  <filesize>20862</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>8f28e4932c33cf70c268fa2ccc414e7b</md5>
+    <size>20862</size>
+    <filedate>1377763031</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>1a6a055f4d71e1f879ed0d4b08f6af73</md5>
+    <size>22917</size>
+    <filedate>1377763031</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>og_quiz 7.x-1.0-beta1</name>
+  <version>7.x-1.0-beta1</version>
+  <tag>7.x-1.0-beta1</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2076687</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta1.tar.gz</download_link>
+  <date>1377762721</date>
+  <mdhash>3f82b1ea8542fcd86fc314d153abfd0e</mdhash>
+  <filesize>20865</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>3f82b1ea8542fcd86fc314d153abfd0e</md5>
+    <size>20865</size>
+    <filedate>1377762721</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/og_quiz-7.x-1.0-beta1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>b873e4b50fa0017811304e58bbe9b145</md5>
+    <size>22916</size>
+    <filedate>1377762722</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+</releases>
+</project>

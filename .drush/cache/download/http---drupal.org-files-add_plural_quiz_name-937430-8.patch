@@ -1,0 +1,47 @@
+diff --git a/quiz.admin.inc b/quiz.admin.inc
+old mode 100644
+new mode 100755
+index 97ca043..704db32
+--- a/quiz.admin.inc
++++ b/quiz.admin.inc
+@@ -144,6 +144,14 @@ function quiz_admin_settings($form, &$form_state) {
+     '#required' => TRUE,
+   );
+ 
++  $form['quiz_look_feel']['quiz_name_plural'] = array(
++    '#type' => 'textfield',
++    '#title' => t('Display name'),
++    '#default_value' => QUIZ_NAME_PLURAL,
++    '#description' => t('The plural variant of your quiz name.'),
++    '#required' => TRUE,
++  );
++
+   $form['quiz_email_settings'] = array(
+     '#type' => 'fieldset',
+     '#title' => t('Email Settings'),
+diff --git a/quiz.module b/quiz.module
+old mode 100644
+new mode 100755
+index ab679e8..fd445b1
+--- a/quiz.module
++++ b/quiz.module
+@@ -40,6 +40,7 @@ define('QUESTION_NEVER', 2);
+  * Quiz name.
+  */
+ define('QUIZ_NAME', _quiz_get_quiz_name());
++define('QUIZ_NAME_PLURAL', _quiz_get_quiz_name('plural'));
+ 
+ /**
+  * Define feedback statuses.
+@@ -3787,9 +3788,9 @@ function _quiz_cleanup_after_jumping($quiz, $rid) {
+  * @return
+  *   Quiz name variable.
+  */
+-function _quiz_get_quiz_name() {
++function _quiz_get_quiz_name($type = '') {
+   // @todo: remove all the quiz_name stuff? Isn't there better ways to do this?
+-  return variable_get('quiz_name', 'Quiz');
++  return variable_get('quiz_name' . (empty($type) ? '' : "_$type"), 'Quiz');
+ }
+ 
+ /**

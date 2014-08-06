@@ -1,0 +1,14 @@
+diff --git a/supported/user.inc b/supported/user.inc
+index 5011b8f..19b604d 100644
+--- a/supported/user.inc
++++ b/supported/user.inc
+@@ -155,6 +155,9 @@ function user_user_import_pre_save($settings, $account, $fields, $errors, $updat
+     if (isset($fields['user']['created'][0]) && !empty($fields['user']['created'][0])) {
+       $account_add['created'] = $fields['user']['created'][0];
+     }
++    else {
++      $account_add['created'] = time();
++    }
+ 
+     $account_add['init']     = $fields['user']['email'][0];
+ 

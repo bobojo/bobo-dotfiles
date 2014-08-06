@@ -1,0 +1,1450 @@
+diff --git a/includes/quiz_stats/quiz_stats.admin.inc b/includes/quiz_stats/quiz_stats.admin.inc
+index 10ae26f..627d03e 100644
+--- a/includes/quiz_stats/quiz_stats.admin.inc
++++ b/includes/quiz_stats/quiz_stats.admin.inc
+@@ -32,7 +32,7 @@ function quiz_stats_revision_selector_page($quiz) {
+   }
+   else {
+     $content = array();
+-    $content['explanation'] = t('There are !num revisions of this quiz that have been taken.
++    $content['explanation'] = t('There are !num revisions of this lesson that have been taken.
+     Different revisions may have different scoring, difficulity and other differences affecting its statistics.
+     Because of this you have to choose the revision you want to see statistics from.', array('!num' => $count));
+     $content['links'] = array();
+@@ -118,7 +118,7 @@ function _get_quiz_grade_range_chart($vid, $uid = 0) {
+   return array(
+     'chart' => $chart,
+     'title' => t('Distribution'),
+-    'explanation' => t('This chart shows the distribution of the scores on this quiz.'),
++    'explanation' => t('This chart shows the distribution of the scores on this lesson.'),
+   );
+ }
+ 
+@@ -194,7 +194,7 @@ function _get_quiz_status_chart($vid, $uid = 0) {
+   return array(
+     'chart' => $chart,
+     'title' => t('Status'),
+-    'explanation' => t('This chart shows the status for all attempts made to answer this revision of the quiz.'),
++    'explanation' => t('This chart shows the status for all attempts made to answer this revision of the lesson.'),
+   );
+ }
+ 
+@@ -248,7 +248,7 @@ function _get_date_vs_takeup_count_chart($vid, $uid = 0) {
+   return array(
+     'chart' => $chart,
+     'title' => t('Activity'),
+-    'explanation' => t('This chart shows how many times the quiz has been taken the last !days days.', array('!days' => $end)),
++    'explanation' => t('This chart shows how many times the lesson has been taken the last !days days.', array('!days' => $end)),
+   );
+ }
+ 
+@@ -317,7 +317,7 @@ function theme_quiz_grade_range($variables) {
+   $chart['#data_colors'][] = 'ff6600';
+   $chart['#data_colors'][] = 'ff0000';
+   // chart x-axis label
+-  $chart['#mixed_axis_labels'][CHART_AXIS_X_BOTTOM][2][] = chart_mixed_axis_label(t('Quiz Grade Range'), 50);
++  $chart['#mixed_axis_labels'][CHART_AXIS_X_BOTTOM][2][] = chart_mixed_axis_label(t('Lesson Grade Range'), 50);
+   // chart y-axis label and data
+   $chart['#mixed_axis_labels'][CHART_AXIS_Y_LEFT][1][] = chart_mixed_axis_label(t('Attempts'), 100);
+   $chart['#mixed_axis_labels'][CHART_AXIS_Y_LEFT][0][] = chart_mixed_axis_range_label(0, $max);
+@@ -343,7 +343,7 @@ function theme_quiz_top_scorers($variables) {
+   $attendees = $variables['scorer'];
+   $chart = array(
+     '#chart_id' => 'quiz_top_scorers',
+-    '#title' => t('Quiz Top Scorers'),
++    '#title' => t('Lesson Top Scorers'),
+     '#type' => CHART_TYPE_BAR_V_GROUPED,
+     '#size' => chart_size(600, 400),
+     '#grid_lines' => chart_grid_lines(10, 10),
+@@ -352,7 +352,7 @@ function theme_quiz_top_scorers($variables) {
+   foreach ($attendees as $attendee) {
+     $chart['#data'][][] = $attendee['score'];
+     $chart['#data_colors'][] = chart_unique_color(count($chart['#data']));
+-    $chart['#mixed_axis_labels'][CHART_AXIS_X_BOTTOM][2][] = chart_mixed_axis_label(t('Quiz Attendees'), 50);
++    $chart['#mixed_axis_labels'][CHART_AXIS_X_BOTTOM][2][] = chart_mixed_axis_label(t('Lesson Attendees'), 50);
+     $chart['#legends'][] = $attendee['name'] . ' ' . $attendee['score'] . ' %';
+   }
+   $chart['#mixed_axis_labels'][CHART_AXIS_Y_LEFT][1][] = chart_mixed_axis_label(t('Score') . ' (%)', 100);
+@@ -374,7 +374,7 @@ function theme_get_quiz_status_chart($variables) {
+   $quiz['total'] = $quiz['no_pass'] + $quiz['no_fail'] + $quiz['no_incomplete'];
+   $chart = array(
+     '#chart_id' => 'quiz_status_chart',
+-    '#title' => t('Quiz Status Chart'),
++    '#title' => t('Lesson Status Chart'),
+     '#type' => CHART_TYPE_PIE_3D,
+     '#size' => chart_size(500, 200),
+     '#adjust_resolution' => TRUE,
+@@ -455,7 +455,7 @@ function theme_quiz_stats_get_basic_stats($variables) {
+   }
+   $header = $rows = array();
+   $header = array(
+-    'title' => t('Quiz'),
++    'title' => t('Lesson'),
+     'creator' => t('Author'),
+     'created' => t('Created'),
+   );
+diff --git a/includes/quiz_stats/quiz_stats.module b/includes/quiz_stats/quiz_stats.module
+index 455711b..51d63d1 100644
+--- a/includes/quiz_stats/quiz_stats.module
++++ b/includes/quiz_stats/quiz_stats.module
+@@ -12,7 +12,7 @@
+  */
+ function quiz_stats_help($path, $arg) {
+   if ($path == 'admin/help#quiz_stats') {
+-    return '<p>' . t('Module creates a report to analyse and compare the results of quiz attendees. The reports will be displayed visually using goolge chart API.') . '</p>';
++    return '<p>' . t('Module creates a report to analyse and compare the results of lesson attendees. The reports will be displayed visually using goolge chart API.') . '</p>';
+   }
+ }
+ 
+diff --git a/includes/quiz_stats/theme/quiz_stats_charts.tpl.php b/includes/quiz_stats/theme/quiz_stats_charts.tpl.php
+index 8901c75..dc1a2b5 100755
+--- a/includes/quiz_stats/theme/quiz_stats_charts.tpl.php
++++ b/includes/quiz_stats/theme/quiz_stats_charts.tpl.php
+@@ -34,6 +34,6 @@ _quiz_stats_print_chart($charts['top_scorers']);
+ _quiz_stats_print_chart($charts['status']);
+ _quiz_stats_print_chart($charts['grade_range']);
+ if (!$chart_found) {
+-  echo t('There are no statistics for this quiz (or quiz revision). This is probably because nobody has yet run this quiz (or quiz revision). If the quiz has multiple revisions, it is possible that the other revisions do have statistics. If this is the last revision, taking the quiz should generate some statistics.');
++  echo t('There are no statistics for this lesson (or lesson revision). This is probably because nobody has yet run this lesson (or lesson revision). If the lesson has multiple revisions, it is possible that the other revisions do have statistics. If this is the last revision, taking the lesson should generate some statistics.');
+ }
+ ?>
+diff --git a/includes/views/handlers/quiz_views_handler_argument_quiz_nid.inc b/includes/views/handlers/quiz_views_handler_argument_quiz_nid.inc
+index 179e4a1..76cce27 100644
+--- a/includes/views/handlers/quiz_views_handler_argument_quiz_nid.inc
++++ b/includes/views/handlers/quiz_views_handler_argument_quiz_nid.inc
+@@ -39,13 +39,13 @@ class quiz_views_handler_argument_quiz_nid extends views_handler_argument_numeri
+     //    $form['wildcard_substitution']['#weight'] = -4;
+     $form['which_vid'] = array(
+       '#type' => 'select',
+-      '#title' => t('Quiz revision(s) to use'),
++      '#title' => t('Lesson revision(s) to use'),
+       '#options' => array(
+-        'latest' => t('Latest: most recent version of the quiz ONLY.'),
+-        'initial' => t('Initial: original version of the quiz ONLY.'),
+-        'all' => t('All: ALL versions of the quiz.')
++        'latest' => t('Latest: most recent version of the lesson ONLY.'),
++        'initial' => t('Initial: original version of the lesson ONLY.'),
++        'all' => t('All: ALL versions of the lesson.')
+       ),
+-      '#description' => t('The validator will transform the incoming quiz node id(s) into one or more quiz node revisions, depending on your selection.'),
++      '#description' => t('The validator will transform the incoming lesson node id(s) into one or more lesson node revisions, depending on your selection.'),
+       '#default_value' => $this->options['which_vid'],
+       '#weight' => -1,
+     );
+@@ -155,4 +155,4 @@ class quiz_views_handler_argument_quiz_nid extends views_handler_argument_numeri
+     }
+     return (count($this->corresponding_vids) > 1);
+   }
+-}
+\ No newline at end of file
++}
+diff --git a/includes/views/handlers/quiz_views_handler_argument_user_uid_nullable.inc b/includes/views/handlers/quiz_views_handler_argument_user_uid_nullable.inc
+index 7c5f2e1..418cb06 100644
+--- a/includes/views/handlers/quiz_views_handler_argument_user_uid_nullable.inc
++++ b/includes/views/handlers/quiz_views_handler_argument_user_uid_nullable.inc
+@@ -20,7 +20,7 @@ class quiz_views_handler_argument_user_uid_nullable extends views_handler_argume
+     $form['allow_null'] = array(
+       '#type' => 'checkbox',
+       '#title' => t('Used for Quiz Status'),
+-      '#description' => t('When this agument is used, this box must be checked if the Quiz Status field is to work properly.'),
++      '#description' => t('When this agument is used, this box must be checked if the Lesson Status field is to work properly.'),
+       '#default_value' => $this->options['allow_null'],
+     );
+   }
+diff --git a/includes/views/handlers/quiz_views_handler_filter_question_status.inc b/includes/views/handlers/quiz_views_handler_filter_question_status.inc
+index ab20657..b7483ba 100644
+--- a/includes/views/handlers/quiz_views_handler_filter_question_status.inc
++++ b/includes/views/handlers/quiz_views_handler_filter_question_status.inc
+@@ -7,7 +7,7 @@
+ class quiz_views_handler_filter_question_status extends views_handler_filter_in_operator {
+   function get_value_options() {
+     if (!isset($this->value_options)) {
+-      $this->value_title = t('Question Status in Quiz');
++      $this->value_title = t('Question Status in Lesson');
+       $this->value_options = array(
+         QUESTION_RANDOM => t('Random'), // 'Random-ly' better?
+         QUESTION_ALWAYS => t('Always'),
+diff --git a/includes/views/handlers/quiz_views_handler_filter_quiz_nid.inc b/includes/views/handlers/quiz_views_handler_filter_quiz_nid.inc
+index a1a426c..a773b73 100644
+--- a/includes/views/handlers/quiz_views_handler_filter_quiz_nid.inc
++++ b/includes/views/handlers/quiz_views_handler_filter_quiz_nid.inc
+@@ -68,25 +68,25 @@ class quiz_views_handler_filter_quiz_nid extends views_handler_filter {
+     parent::options_form($form, $form_state);
+     $form['which_vid'] = array(
+       '#type' => 'select',
+-      '#title' => t('Quiz revision(s) to use'),
++      '#title' => t('Lesson revision(s) to use'),
+       '#options' => array(
+-        'latest' => t('Latest: most recent version of the quiz ONLY.'),
+-        'initial' => t('Initial: original version of the quiz ONLY.'),
+-        // 'all' => t('All: ALL versions of the quiz.')
++        'latest' => t('Latest: most recent version of the lesson ONLY.'),
++        'initial' => t('Initial: original version of the lesson ONLY.'),
++        // 'all' => t('All: ALL versions of the lesson.')
+       ),
+-      '#description' => t('The filter will limit score results for a particular quiz node id(s) into one or more quiz node revision ids, depending on your selection.'),
++      '#description' => t('The filter will limit score results for a particular lesson node id(s) into one or more lesson node revision ids, depending on your selection.'),
+       '#default_value' => $this->options['which_vid'],
+     );
+ 
+     $tables = array('none' => t('None'));
+-    $tables['results'] = t('Use Quiz Results');
+-    $tables['questions'] = t('Use Quiz Questions');
++    $tables['results'] = t('Use Lesson Results');
++    $tables['questions'] = t('Use Lesson Questions');
+     $form['secondary'] = array(
+       '#type' => 'radios',
+       '#title' => t('Secondary Grouping'),
+       '#options' => $tables,
+       '#default_value' => $this->options['secondary'],
+-      '#description' => t('If you are looking to generate a list of either quiz questions or quiz results, you must select the appropriate option from this list.'),
++      '#description' => t('If you are looking to generate a list of either lesson questions or lesson results, you must select the appropriate option from this list.'),
+     );
+   }
+ 
+diff --git a/includes/views/handlers/quiz_views_handler_filter_user_nullable.inc b/includes/views/handlers/quiz_views_handler_filter_user_nullable.inc
+index 9b0fd7f..d4ce097 100644
+--- a/includes/views/handlers/quiz_views_handler_filter_user_nullable.inc
++++ b/includes/views/handlers/quiz_views_handler_filter_user_nullable.inc
+@@ -19,13 +19,13 @@ class quiz_views_handler_filter_user_nullable extends views_handler_filter {
+     $form['use_current'] = array(
+       '#type' => 'checkbox',
+       '#title' => t('Use Current User'),
+-      '#description' => t('Filter using the current user; only quiz results owned by the current user will be shown.'),
++      '#description' => t('Filter using the current user; only lesson results owned by the current user will be shown.'),
+       '#default_value' => $this->options['use_current'],
+     );
+     $form['allow_null'] = array(
+       '#type' => 'checkbox',
+-      '#title' => t('Used for Quiz Status'),
+-      '#description' => t('If you are using the Quiz Status, this box must be checked; otherwise, the field will not work properly.'),
++      '#title' => t('Used for Lesson Status'),
++      '#description' => t('If you are using the Lesson Status, this box must be checked; otherwise, the field will not work properly.'),
+       '#default_value' => $this->options['allow_null'],
+     );
+   }
+diff --git a/includes/views/handlers/quiz_views_handler_filter_user_quiz_state.inc b/includes/views/handlers/quiz_views_handler_filter_user_quiz_state.inc
+index 41fd04a..bc7e0fe 100644
+--- a/includes/views/handlers/quiz_views_handler_filter_user_quiz_state.inc
++++ b/includes/views/handlers/quiz_views_handler_filter_user_quiz_state.inc
+@@ -33,8 +33,8 @@ class quiz_views_handler_filter_user_quiz_state extends views_handler_filter {
+   function base_form_item() {
+     return array(
+       '#type' => 'radios',
+-      '#title' => t('Quiz State'),
+-      '#description' => t('Output will be limited to only include quiz results in this state. If the filter is exposed, the value set here will be used as the default. Note that "Any" is only useful for exposed filters.'),
++      '#title' => t('Lesson State'),
++      '#description' => t('Output will be limited to only include lesson results in this state. If the filter is exposed, the value set here will be used as the default. Note that "Any" is only useful for exposed filters.'),
+       '#options' => $this->states,
+       '#default_value' => !empty($this->value['quiz_state']) ? $this->value['quiz_state'] : 'any',
+     );
+diff --git a/includes/views/quiz.views.inc b/includes/views/quiz.views.inc
+index afc3396..7af5f4e 100644
+--- a/includes/views/quiz.views.inc
++++ b/includes/views/quiz.views.inc
+@@ -71,12 +71,12 @@ function quiz_views_data() {
+ 
+     // Table Definition
+     'table' => array(
+-      'group' => t('Quiz'),
++      'group' => t('Lesson'),
+       // Base tables:
+       'base' => array(
+         'field' => 'vid',
+-        'title' => t('Quiz'),
+-        'help' => t('Quizzes are collections of questions that are taken and scored.'),
++        'title' => t('Lesson'),
++        'help' => t('Lessons are collections of questions that are taken and scored.'),
+         'weight' => 0,
+       ),
+ 
+@@ -98,8 +98,8 @@ function quiz_views_data() {
+ 
+     // Field definitions
+     'nid' => array(
+-      'title' => t('Quiz Node NID'),
+-      'help' => t('The ID of the Quiz Node.'),
++      'title' => t('Lesson Node NID'),
++      'help' => t('The ID of the Lesson Node.'),
+       'field' => array(
+         'handler' => 'views_handler_field',
+         'click sortable' => TRUE,
+@@ -114,8 +114,8 @@ function quiz_views_data() {
+       ),
+       'filter' => array(
+         'handler' => 'quiz_views_handler_filter_quiz_nid',
+-        'title' => t('Quiz Version'),
+-        'help' => t('Filter results to a specific subset of quiz versions.'),
++        'title' => t('Lesson Version'),
++        'help' => t('Filter results to a specific subset of lesson versions.'),
+         'group by' => 'vid',
+         // 'secondary group by' => 'vid',
+       ),
+@@ -128,8 +128,8 @@ function quiz_views_data() {
+       ),
+     ),
+     'vid' => array(
+-      'title' => t('Quiz Node VID'),
+-      'help' => t('The Revision ID of the Quiz Node.'),
++      'title' => t('Lesson Node VID'),
++      'help' => t('The Revision ID of the Lesson Node.'),
+       'field' => array(
+         'handler' => 'views_handler_field',
+         'click sortable' => TRUE,
+@@ -146,13 +146,13 @@ function quiz_views_data() {
+         'handler' => 'views_handler_relationship',
+         'base' => 'node_revision',
+         'field' => 'vid',
+-        'label' => t('quiz node revision'),
++        'label' => t('lesson node revision'),
+       ),
+       'sort' => array('handler' => 'views_handler_sort'),
+     ),
+     'number_of_random_questions' => array(
+       'title' => t('Number of random questions'),
+-      'help' => t('The number of questions on this quiz that will be randomly selected.'),
++      'help' => t('The number of questions on this lesson that will be randomly selected.'),
+       'field' => array(
+         'handler' => 'views_handler_field_numeric',
+         'click sortable' => TRUE
+@@ -166,7 +166,7 @@ function quiz_views_data() {
+     ),
+     'pass_rate' => array(
+       'title' => t('Pass rate'),
+-      'help' => t('The percentage of questions that must be correct before the quiz is passed.'),
++      'help' => t('The percentage of questions that must be correct before the lesson is passed.'),
+       'field' => array('handler' => 'views_handler_field_numeric', 'click sortable' => TRUE),
+       'argument' => array(
+         'handler' => 'views_handler_argument_numeric',
+@@ -186,7 +186,7 @@ function quiz_views_data() {
+     ),
+     'backwards_navigation' => array(
+       'title' => t('Backwards navigation'),
+-      'help' => t('Indicates whether quiz takers can go back to previous questions.'),
++      'help' => t('Indicates whether lesson takers can go back to previous questions.'),
+       'field' => array(
+         'handler' => 'views_handler_field_boolean',
+         'click sortable' => TRUE,
+@@ -205,7 +205,7 @@ function quiz_views_data() {
+ 
+     'feedback_time' => array(
+       'title' => t('Feedback Time'),
+-      'help' => t('Indicates whether quiz takers will get feedback after every question.'),
++      'help' => t('Indicates whether lesson takers will get feedback after every question.'),
+       'field' => array(
+         'handler' => 'views_handler_field_boolean',
+         'click sortable' => TRUE,
+@@ -214,7 +214,7 @@ function quiz_views_data() {
+     ),
+     'time_limit' => array(
+       'title' => t('Time limit'),
+-      'help' => t('The time limit on a quiz.'),
++      'help' => t('The time limit on a lesson.'),
+       'field' => array(
+         'handler' => 'quiz_views_handler_field_time',
+         'click sortable' => TRUE,
+@@ -227,7 +227,7 @@ function quiz_views_data() {
+     ),
+     'quiz_open' => array(
+       'title' => t('Open time'),
+-      'help' => t('The first time a new quiz can be taken.'),
++      'help' => t('The first time a new lesson can be taken.'),
+       'field' => array(
+         'handler' => 'views_handler_field_date',
+         'click sortable' => TRUE,
+@@ -240,7 +240,7 @@ function quiz_views_data() {
+     ),
+     'quiz_close' => array(
+       'title' => t('Close time'),
+-      'help' => t('The last time a new quiz can be taken.'),
++      'help' => t('The last time a new lesson can be taken.'),
+       'field' => array(
+         'handler' => 'views_handler_field_date',
+         'click sortable' => TRUE,
+@@ -253,7 +253,7 @@ function quiz_views_data() {
+     ),
+     'quiz_always' => array(
+       'title' => t('Always Available'),
+-      'help' => t('Indicates whether quiz is always available (Open and Close time are ignored).'),
++      'help' => t('Indicates whether lesson is always available (Open and Close time are ignored).'),
+       'field' => array(
+         'handler' => 'views_handler_field_boolean',
+         'click sortable' => TRUE,
+@@ -262,7 +262,7 @@ function quiz_views_data() {
+     ),
+     'takes' => array(
+       'title' => t('Allowed takes'),
+-      'help' => t('The number of times a quiz can be taken.'),
++      'help' => t('The number of times a lesson can be taken.'),
+       'field' => array(
+         'handler' => 'quiz_views_handler_field_takes',
+         'click sortable' => TRUE,
+@@ -275,8 +275,8 @@ function quiz_views_data() {
+     ),
+     'take' => array(
+       'field' => array(
+-        'title' => t('Take quiz link'),
+-        'help' => t('Allows users to take the quiz if available.'),
++        'title' => t('Take lesson link'),
++        'help' => t('Allows users to take the lesson if available.'),
+         'handler' => 'quiz_views_handler_field_node_link_take',
+         'click sortable' => TRUE,
+       ),
+@@ -308,7 +308,7 @@ function quiz_views_data() {
+ 
+   $data['quiz_node_relationship'] = array(
+     'table' => array(
+-      'group' => t('Quiz Questions'),
++      'group' => t('Lesson Questions'),
+       'join' => array(
+         // This is vid because vid is always more specific. We never work with
+         // nid.
+@@ -320,8 +320,8 @@ function quiz_views_data() {
+       ),
+     ),
+     'parent_nid' => array(
+-      'title' => t('Quiz Node ID'),
+-      'help' => t('The node id of the quiz to which the question is attached.'),
++      'title' => t('Lesson Node ID'),
++      'help' => t('The node id of the lesson to which the question is attached.'),
+       'field' => array(
+         'handler' => 'views_handler_field_numeric',
+         'click sortable' => TRUE,
+@@ -336,7 +336,7 @@ function quiz_views_data() {
+       ),
+       'filter' => array(
+         'handler' => 'quiz_views_handler_filter_quiz_nid',
+-        'help' => t('Filter results to a particular subset of quiz versions.'),
++        'help' => t('Filter results to a particular subset of lesson versions.'),
+         'nid field' => 'parent_nid',
+         'vid field' => 'parent_vid',
+         'secondary group' => 'child_nid',
+@@ -345,15 +345,15 @@ function quiz_views_data() {
+         'handler' => 'views_handler_relationship',
+         'base' => 'node',
+         'field' => 'parent_nid',
+-        'label' => t('Quiz node id'),
++        'label' => t('Lesson node id'),
+       ),
+       'sort' => array(
+         'handler' => 'views_handler_sort',
+       ),
+     ),
+     'parent_vid' => array(
+-      'title' => t('Quiz Node VID'),
+-      'help' => t('The node revision id of the quiz to which the question is attached.'),
++      'title' => t('Lesson Node VID'),
++      'help' => t('The node revision id of the lesson to which the question is attached.'),
+       'field' => array(
+         'handler' => 'views_handler_field_numeric',
+         'click sortable' => TRUE,
+@@ -368,7 +368,7 @@ function quiz_views_data() {
+         'handler' => 'views_handler_relationship',
+         'base' => 'node_revision',
+         'field' => 'parent_vid',
+-        'label' => t('Quiz node revision'),
++        'label' => t('Lesson node revision'),
+       ),
+       'sort' => array(
+         'handler' => 'views_handler_sort',
+@@ -424,21 +424,21 @@ function quiz_views_data() {
+     ),
+     'question_status' => array(
+       'title' => t('Question Status'),
+-      'help' => t('Field indicating the state of a question for the relevant quiz.'),
++      'help' => t('Field indicating the state of a question for the relevant lesson.'),
+       'field' => array(
+         'handler' => 'quiz_views_handler_field_question_status',
+         'click sortable' => TRUE,
+       ),
+       'filter' => array(
+         'handler' => 'quiz_views_handler_filter_question_status',
+-        'help' => t('Filter results based on the question\'s status in the relevant quiz.'),
++        'help' => t('Filter results based on the question\'s status in the relevant lesson.'),
+       ),
+       'sort' => array(
+         'handler' => 'views_handler_sort',
+       ),
+       'number_questions' => array(
+         'title' => t('Number of Questions'),
+-        'help' => t('The number of questions assigned to the quiz.'),
++        'help' => t('The number of questions assigned to the lesson.'),
+         'field' => array(
+           'handler' => 'quiz_views_handler_field_number_questions',
+         ),
+@@ -497,7 +497,7 @@ function quiz_views_data() {
+     // Field descriptions:
+     'result_id' => array(
+       'title' => t('Result ID'),
+-      'help' => t('The ID identifying a particular set of quiz results. This ID is unique with respect to the quiz nid and vid of the quiz, uid of the quizee, and the take of the quiz.'),
++      'help' => t('The ID identifying a particular set of lesson results. This ID is unique with respect to the lesson nid and vid of the lesson, uid of the user, and the take of the lesson.'),
+       'field' => array(
+         'handler' => 'views_handler_field_numeric',
+         'click sortable' => TRUE,
+@@ -516,8 +516,8 @@ function quiz_views_data() {
+     ),
+     'nid' => array(
+       'real field' => 'vid',
+-      'title' => t('Quiz Node NID'),
+-      'help' => t('The ID of the Quiz Node.'),
++      'title' => t('Lesson Node NID'),
++      'help' => t('The ID of the Lesson Node.'),
+       'argument' => array(
+         'handler' => 'quiz_views_handler_argument_quiz_nid',
+         //'name_field' => 'title',
+@@ -527,7 +527,7 @@ function quiz_views_data() {
+       ),
+       'filter' => array(
+         'handler' => 'quiz_views_handler_filter_quiz_nid',
+-        'help' => t('Filter results to a particular subset of quiz versions.'),
++        'help' => t('Filter results to a particular subset of lesson versions.'),
+         'nid field' => 'nid',
+         'vid field' => 'vid',
+       ),
+@@ -540,8 +540,8 @@ function quiz_views_data() {
+       ),
+     ),
+     'vid' => array(
+-      'title' => t('Quiz Node VID'),
+-      'help' => t('The Version ID of the Quiz Node.'),
++      'title' => t('Lesson Node VID'),
++      'help' => t('The Version ID of the Lesson Node.'),
+       'field' => array(
+         'handler' => 'views_handler_field',
+         'click sortable' => TRUE,
+@@ -563,7 +563,7 @@ function quiz_views_data() {
+     ),
+     'uid' => array(
+       'title' => t('User'),
+-      'help' => t('The ID of the user who took this quiz.'),
++      'help' => t('The ID of the user who took this lesson.'),
+       'field' => array(
+         'handler' => 'views_handler_field_user',
+         'click sortable' => TRUE,
+@@ -577,7 +577,7 @@ function quiz_views_data() {
+       ),
+       'filter' => array(
+         'handler' => 'quiz_views_handler_filter_user_nullable',
+-        'help' => t('Filter on the user who owns the quiz results.'),
++        'help' => t('Filter on the user who owns the lesson results.'),
+       ),
+       'sort' => array('handler' => 'views_handler_sort'),
+       // Related to USERS
+@@ -589,8 +589,8 @@ function quiz_views_data() {
+       ),
+     ),
+     'time_start' => array(
+-      'title' => t('Quiz Start Time'),
+-      'help' => t('Time the quiz was started.'),
++      'title' => t('Lesson Start Time'),
++      'help' => t('Time the lesson was started.'),
+       'field' => array(
+         'handler' => 'views_handler_field_date',
+         'click sortable' => TRUE,
+@@ -604,8 +604,8 @@ function quiz_views_data() {
+       'sort' => array('handler' => 'views_handler_sort_date'),
+     ),
+     'time_end' => array(
+-      'title' => t('Quiz End Time'),
+-      'help' => t('Time the quiz was finished.'),
++      'title' => t('Lesson End Time'),
++      'help' => t('Time the lesson was finished.'),
+       'field' => array(
+         'handler' => 'views_handler_field_date',
+         'click sortable' => TRUE,
+@@ -624,7 +624,7 @@ function quiz_views_data() {
+     ),
+     'score' => array(
+       'title' => t('Score'),
+-      'help' => t('Score on the Quiz.'),
++      'help' => t('Score on the Lesson.'),
+       'field' => array(
+         'handler' => 'views_handler_field_numeric',
+         'click sortable' => TRUE,
+@@ -637,12 +637,12 @@ function quiz_views_data() {
+       'sort' => array('handler' => 'views_handler_sort'),
+ 	  'filter' => array(
+ 		'handler' => 'views_handler_filter_numeric',
+-		'help' => t('Filter the results based on the score of the quiz.')
++		'help' => t('Filter the results based on the score of the lesson.')
+ 	  ),
+     ),
+     'is_invalid' => array(
+       'title' => t('Is Invalid'),
+-      'help' => t('Indicates whether or not a quiz result is valid. This is a simple database boolean; the meaning of the "valid" flag should vary according to your use case.'),
++      'help' => t('Indicates whether or not a lesson result is valid. This is a simple database boolean; the meaning of the "valid" flag should vary according to your use case.'),
+       'field' => array(
+         'handler' => 'views_handler_field_boolean',
+       ),
+@@ -653,7 +653,7 @@ function quiz_views_data() {
+     ),
+     'score_aggregate' => array(
+       'title' => t('Score Aggregations'),
+-      'help' => t('Aggregate scores on quizzes using a variety of different algorithms.'),
++      'help' => t('Aggregate scores on lessons using a variety of different algorithms.'),
+       'real field' => 'score',
+       'field' => array(
+         'handler' => 'quiz_views_handler_field_score_aggregate',
+@@ -662,15 +662,15 @@ function quiz_views_data() {
+       ),
+     ),
+     'quiz_state' => array(
+-      'title' => t('Quiz State'),
+-      'help' => t('The state of the quiz for the provided user. Calculated on the fly; can be "Finished," "In Progress," or "Not Started".'),
++      'title' => t('Lesson State'),
++      'help' => t('The state of the lesson for the provided user. Calculated on the fly; can be "Finished," "In Progress," or "Not Started".'),
+       'field' => array(
+         'handler' => 'quiz_views_handler_field_user_quiz_state',
+         'click sortable' => TRUE,
+       ),
+       'filter' => array(
+         'handler' => 'quiz_views_handler_filter_user_quiz_state',
+-        'help' => t('Filter the results based on the state of quizzes with respect to users (i.e., whether they have started, finished, or are in progress on the quiz).'),
++        'help' => t('Filter the results based on the state of lessons with respect to users (i.e., whether they have started, finished, or are in progress on the lesson).'),
+       ),
+     )
+   ); // End quiz_node_results
+@@ -679,7 +679,7 @@ function quiz_views_data() {
+   $data['quiz_node_results_answers'] = array(
+     // Table Definition
+     'table' => array(
+-      'group' => 'Quiz Results by Question',
++      'group' => 'Lesson Results by Question',
+       'join' => array(
+         'quiz_node_properties' => array(
+           'left_table' => 'quiz_node_relationship',
+@@ -693,7 +693,7 @@ function quiz_views_data() {
+     // Field descriptions:
+     'result_id' => array(
+       'title' => t('Result ID'),
+-      'help' => t('The ID identifying a particular set of quiz results. This ID is unique with respect to the quiz nid and vid of the quiz, uid of the quizee, and the take of the quiz.'),
++      'help' => t('The ID identifying a particular set of lesson results. This ID is unique with respect to the lesson nid and vid of the lesson, uid of the user, and the take of the lesson.'),
+       'field' => array(
+         'handler' => 'views_handler_field_numeric',
+         'click sortable' => TRUE,
+@@ -760,7 +760,7 @@ function quiz_views_data() {
+       'sort' => array('handler' => 'views_handler_sort'),
+     ),
+     'answer_timestamp' => array(
+-      'title' => t('Quiz Answer Time'),
++      'title' => t('Lesson Answer Time'),
+       'help' => t('Time the answer was provided.'),
+       'field' => array(
+         'handler' => 'views_handler_field_date',
+@@ -794,7 +794,7 @@ function quiz_views_data() {
+     ),
+     'is_correct' => array(
+       'title' => t('Is Correct'),
+-      'help' => t('Indicates whether or not a quiz answer was correct.'),
++      'help' => t('Indicates whether or not a lesson answer was correct.'),
+       'field' => array(
+         'handler' => 'views_handler_field_boolean',
+         'click sortable' => TRUE,
+@@ -806,7 +806,7 @@ function quiz_views_data() {
+     ),
+     'result_id' => array(
+       'title' => t('Result ID'),
+-      'help' => t('The ID identifying a particular set of quiz results. This ID is unique with respect to the quiz nid and vid of the quiz, uid of the quizee, and the take of the quiz.'),
++      'help' => t('The ID identifying a particular set of lesson results. This ID is unique with respect to the lesson nid and vid of the lesson, uid of the user, and the take of the lesson.'),
+       'field' => array(
+         'handler' => 'views_handler_field_numeric',
+         'click sortable' => TRUE,
+@@ -825,7 +825,7 @@ function quiz_views_data() {
+     ),
+     'is_skipped' => array(
+       'title' => t('Is Skipped'),
+-      'help' => t('Indicates whether or not a quiz question was skipped.'),
++      'help' => t('Indicates whether or not a lesson question was skipped.'),
+       'field' => array(
+         'handler' => 'views_handler_field_boolean',
+       ),
+@@ -958,7 +958,7 @@ function quiz_views_data() {
+     ),
+     'result_id' => array(
+       'title' => t('Result ID'),
+-      'help' => t('The ID identifying a particular set of quiz results. This ID is unique with respect to the quiz nid and vid of the quiz, uid of the quizee, and the take of the quiz.'),
++      'help' => t('The ID identifying a particular set of lesson results. This ID is unique with respect to the lesson nid and vid of the lesson, uid of the user, and the take of the lesson.'),
+       'field' => array(
+         'handler' => 'views_handler_field_numeric',
+         'click sortable' => TRUE,
+@@ -1029,7 +1029,7 @@ function quiz_views_data() {
+ 
+   $data['quiz_multichoice_user_answer_multi'] = array(
+     'table' => array(
+-      'group' => t('Quiz Multichoice Answers'),
++      'group' => t('Lesson Multichoice Answers'),
+       'join' => array(
+         'quiz_node_properties' => array(
+           'left_table' => 'quiz_multichoice_user_answers',
+diff --git a/question_types/long_answer/long_answer.module b/question_types/long_answer/long_answer.module
+index f5bd412..197ad81 100644
+--- a/question_types/long_answer/long_answer.module
++++ b/question_types/long_answer/long_answer.module
+@@ -58,7 +58,7 @@ function long_answer_quiz_question_info() {
+   return array(
+     'long_answer' => array(
+       'name' => t('Long answer question'),
+-      'description' => t('Quiz questions that allow a user to enter multiple paragraphs of text.'),
++      'description' => t('Lesson questions that allow a user to enter multiple paragraphs of text.'),
+       'question provider' => 'LongAnswerQuestion',
+       'response provider' => 'LongAnswerResponse',
+       'module' => 'quiz_question', // All wrapper functions are in that module.
+diff --git a/question_types/long_answer/long_answer.test b/question_types/long_answer/long_answer.test
+index 62eb884..08775f7 100644
+--- a/question_types/long_answer/long_answer.test
++++ b/question_types/long_answer/long_answer.test
+@@ -29,7 +29,7 @@ class LongAnswerUnitTest extends DrupalWebTestCase {
+     return array(
+       'name' => t('Long answer unit test'),
+       'description' => t('Suite of unit tests for verifying functionality for essay question functions.'),
+-      'group' => t('Quiz'),
++      'group' => t('Lesson'),
+     );
+   }
+ 
+@@ -294,7 +294,7 @@ class LongAnswerUnitTest extends DrupalWebTestCase {
+     $this->assertEqual(count($unanswered), 1, t('There should be only one unanswered question in *all* questions.'));
+ 
+     $unanswered = long_answer_get_unscored_answers_by_question(1, 1);
+-    $this->assertEqual(count($unanswered), 1, t('There should be only one unanswered question for the quiz.'));
++    $this->assertEqual(count($unanswered), 1, t('There should be only one unanswered question for the lesson.'));
+   }
+ 
+ 
+diff --git a/question_types/matching/matching.module b/question_types/matching/matching.module
+index 68b9b5c..74dd6a1 100644
+--- a/question_types/matching/matching.module
++++ b/question_types/matching/matching.module
+@@ -14,10 +14,10 @@
+ function matching_help($path, $args) {
+   switch ($path) {
+     case 'admin/modules#description':
+-      return t('Matching question type for quiz module.');
++      return t('Matching question type for lesson module.');
+     case 'node/add#matching':
+     case 'admin/help#matching':
+-      return t('A question type for the quiz module: allows you to create matching type questions, which connect terms with one another.');
++      return t('A question type for the lesson module: allows you to create matching type questions, which connect terms with one another.');
+     default:
+       break;
+   }
+@@ -30,7 +30,7 @@ function matching_quiz_question_info() {
+   return array(
+     'matching' => array(
+       'name' => t('Matching'),
+-      'description' => t('Matching question type for quiz module. A question type for the quiz module: allows you to create matching type questions, which connect terms with one another.'),
++      'description' => t('Matching question type for lesson module. A question type for the lesson module: allows you to create matching type questions, which connect terms with one another.'),
+       'question provider' => 'MatchingQuestion',
+       'response provider' => 'MatchingResponse',
+       'module' => 'quiz_question', // All wrapper functions are in that module.
+diff --git a/question_types/multichoice/multichoice.classes.inc b/question_types/multichoice/multichoice.classes.inc
+index fc89059..8bbfd3b 100755
+--- a/question_types/multichoice/multichoice.classes.inc
++++ b/question_types/multichoice/multichoice.classes.inc
+@@ -531,7 +531,7 @@ class MultichoiceQuestion extends QuizQuestion {
+     $form['alternatives']['settings']['choice_random'] = array(
+       '#type' => 'checkbox',
+       '#title' => t('Random order'),
+-      '#description' => t('Present alternatives in random order when quiz is being taken.'),
++      '#description' => t('Present alternatives in random order when lesson is being taken.'),
+       '#default_value' => $default_settings['choice_random'],
+       '#parents' => array('choice_random'),
+     );
+diff --git a/question_types/multichoice/multichoice.module b/question_types/multichoice/multichoice.module
+index 5454363..f43d942 100644
+--- a/question_types/multichoice/multichoice.module
++++ b/question_types/multichoice/multichoice.module
+@@ -41,7 +41,7 @@ function multichoice_quiz_question_info() {
+   return array(
+     'multichoice' => array(
+       'name' => t('Multiple choice question'),
+-      'description' => t('This provides multiple choice questions for use by the Quiz module.'),
++      'description' => t('This provides multiple choice questions for use by the Lesson module.'),
+       'question provider' => 'MultichoiceQuestion',
+       'response provider' => 'MultichoiceResponse',
+       'module' => 'quiz_question', // All wrapper functions are in that module.
+diff --git a/question_types/quiz_ddlines/quiz_ddlines.module b/question_types/quiz_ddlines/quiz_ddlines.module
+index 9327003..6a220df 100644
+--- a/question_types/quiz_ddlines/quiz_ddlines.module
++++ b/question_types/quiz_ddlines/quiz_ddlines.module
+@@ -66,7 +66,7 @@ function quiz_ddlines_quiz_question_info() {
+   return array(
+     'quiz_ddlines' => array(
+       'name' => t('Drag and drop question with lines'),
+-      'description' => t('This provides drag and drop question types with lines for the Quiz module.'),
++      'description' => t('This provides drag and drop question types with lines for the Lesson module.'),
+       'question provider' => 'DDLinesQuestion',
+       'response provider' => 'DDLinesResponse',
+       'module' => 'quiz_question', // All wrapper functions are in that module.
+diff --git a/question_types/quiz_directions/quiz_directions.module b/question_types/quiz_directions/quiz_directions.module
+index 23041e2..3fef5a1 100644
+--- a/question_types/quiz_directions/quiz_directions.module
++++ b/question_types/quiz_directions/quiz_directions.module
+@@ -12,7 +12,7 @@
+  */
+ function quiz_directions_help($path, $args) {
+   if ($path == 'admin/help#quiz_directions') {
+-    return t('Provides directions which can be inserted alongside questions in a quiz.');
++    return t('Provides directions which can be inserted alongside questions in a lesson.');
+   }
+ }
+ 
+@@ -22,8 +22,8 @@ function quiz_directions_help($path, $args) {
+ function quiz_directions_quiz_question_info() {
+   return array(
+     'quiz_directions' => array(
+-      'name' => t('Quiz directions'),
+-      'description' => t('Quiz directions allow you to drop in directions anywhere in a quiz. You can also use them to insert a confirmation step at the end of the quiz.'),
++      'name' => t('Slide'),
++      'description' => t('Slides allow you to drop in directions anywhere in a lesson. You can also use them to insert a confirmation step at the end of the lesson.'),
+       'question provider' => 'QuizDirectionsQuestion',
+       'response provider' => 'QuizDirectionsResponse',
+       'module' => 'quiz_question', // All wrapper functions are in that module.
+diff --git a/question_types/quiz_question/quiz_question.core.inc b/question_types/quiz_question/quiz_question.core.inc
+index d294337..0248076 100644
+--- a/question_types/quiz_question/quiz_question.core.inc
++++ b/question_types/quiz_question/quiz_question.core.inc
+@@ -101,7 +101,7 @@ abstract class QuizQuestion {
+         '#maxlength' => 255,
+         '#default_value' => $this->node->title,
+         '#required' => FALSE,
+-        '#description' => t('Add a title that will help distinguish this question from other questions. This will not be seen during the quiz.'),
++        '#description' => t('Add a title that will help distinguish this question from other questions. This will not be seen during the lesson.'),
+       );
+     }
+     else {
+diff --git a/question_types/quiz_question/quiz_question.module b/question_types/quiz_question/quiz_question.module
+index 4bcb5c6..e78ec3d 100644
+--- a/question_types/quiz_question/quiz_question.module
++++ b/question_types/quiz_question/quiz_question.module
+@@ -853,7 +853,7 @@ function quiz_question_field_extra_fields() {
+     foreach ($question_types as $type_name) {
+       $extra['node'][$type_name]['form']['add_directly'] = array(
+         'label' => t('Add directly'),
+-        'description' => t('Fieldset for adding a question directly into quizzes'),
++        'description' => t('Fieldset for adding a question directly into lessons'),
+         'weight' => -3,
+       );
+     }
+diff --git a/question_types/quiz_question/quiz_question.pages.inc b/question_types/quiz_question/quiz_question.pages.inc
+index bd35c50..c9df5d8 100644
+--- a/question_types/quiz_question/quiz_question.pages.inc
++++ b/question_types/quiz_question/quiz_question.pages.inc
+@@ -50,7 +50,7 @@ function quiz_question_revision_actions($form, $form_state, $nid, $vid) {
+     $quizzes[] = $res_o;
+   }
+ 
+-  $text = t('You have created a new revision of a question that belongs to %num quizzes. Choose what you want to do with the different quizzes.', array('%num' => count($quizzes)));
++  $text = t('You have created a new revision of a question that belongs to %num lessons. Choose what you want to do with the different lessons.', array('%num' => count($quizzes)));
+   $form['intro'] = array(
+     '#markup' => $text,
+   );
+@@ -87,7 +87,7 @@ function quiz_question_revision_actions($form, $form_state, $nid, $vid) {
+   $form['revise_expl'] = array(
+     '#type' => 'item',
+     '#title' => t('Revise'),
+-    '#value' => t('If a quiz has been answered you should make a new revision to ensure that existing answer statistics and reports remain correct.'),
++    '#value' => t('If a lesson has been answered you should make a new revision to ensure that existing answer statistics and reports remain correct.'),
+     '#description' => t('If the new revision of the question only correct spelling errors etc. you don\'t need to revise.'),
+   );
+   return $form;
+@@ -197,13 +197,13 @@ function quiz_question_revision_actions_submit($form, &$form_state) {
+       $res_relationship = db_query('SELECT max_score, auto_update_max_score FROM {quiz_node_relationship}
+               WHERE parent_vid = :parent_vid AND child_nid = :child_nid',
+               array(':parent_vid' => $quiz_vid, ':child_nid' => $form_state['values']['q_nid']))->fetch();
+-      
+-      $auto_update_max_score = isset($res_relationship->auto_update_max_score) ? $res_relationship->auto_update_max_score : 0; 
+-      
++
++      $auto_update_max_score = isset($res_relationship->auto_update_max_score) ? $res_relationship->auto_update_max_score : 0;
++
+       if($res_relationship) {
+         $max_score = $res_relationship->max_score;
+       }
+-      
++
+       if (!$res_relationship || $auto_update_max_score) {
+         $res = db_query('SELECT max_score FROM {quiz_question_properties}
+                 WHERE vid = :vid', array(':vid' => $form_state['values']['q_vid']));
+diff --git a/question_types/scale/scale.module b/question_types/scale/scale.module
+index 53c5054..8ab1925 100644
+--- a/question_types/scale/scale.module
++++ b/question_types/scale/scale.module
+@@ -17,7 +17,7 @@
+  */
+ function scale_help($path, $args) {
+   if ($path == 'admin/help#scale') {
+-    return t('This module provides a scale question type for Quiz. It may be used to construct surveys.');
++    return t('This module provides a scale question type for Lesson. It may be used to construct surveys.');
+   }
+ }
+ 
+@@ -85,7 +85,7 @@ function scale_quiz_question_info() {
+   return array(
+     'scale' => array(
+       'name' => t('Scale question'),
+-      'description' => t('Quiz questions that allow a user to choose from a scale.'),
++      'description' => t('Lesson questions that allow a user to choose from a scale.'),
+       'question provider' => 'ScaleQuestion',
+       'response provider' => 'ScaleResponse',
+       'module' => 'quiz_question', // All wrapper functions are in that module.
+diff --git a/question_types/short_answer/short_answer.module b/question_types/short_answer/short_answer.module
+index c8b9af1..52963a8 100644
+--- a/question_types/short_answer/short_answer.module
++++ b/question_types/short_answer/short_answer.module
+@@ -14,7 +14,7 @@
+  */
+ function short_answer_help($path, $args) {
+   if ($path == 'admin/help#short_answer') {
+-    return t('This module provides a short answer question type for Quiz.');
++    return t('This module provides a short answer question type for Lesson.');
+   }
+ }
+ 
+@@ -66,7 +66,7 @@ function short_answer_quiz_question_info() {
+   return array(
+     'short_answer' => array(
+       'name' => t('Short answer question'),
+-      'description' => t('Quiz questions that allow a user to enter a line of text.'),
++      'description' => t('Lesson questions that allow a user to enter a line of text.'),
+       'question provider' => 'ShortAnswerQuestion',
+       'response provider' => 'ShortAnswerResponse',
+       'module' => 'quiz_question', // All wrapper functions are in that module.
+diff --git a/question_types/short_answer/short_answer.test b/question_types/short_answer/short_answer.test
+index 7149422..ca09596 100644
+--- a/question_types/short_answer/short_answer.test
++++ b/question_types/short_answer/short_answer.test
+@@ -29,7 +29,7 @@ class ShortAnswerUnitTest extends DrupalWebTestCase {
+     return array(
+       'name' => t('Short Answer unit test'),
+       'description' => t('Unit test for Short answers question type.'),
+-      'group' => t('Quiz'),
++      'group' => t('Lesson'),
+     );
+   }
+ 
+diff --git a/question_types/truefalse/truefalse.module b/question_types/truefalse/truefalse.module
+index c7abcda..55c5d12 100644
+--- a/question_types/truefalse/truefalse.module
++++ b/question_types/truefalse/truefalse.module
+@@ -30,7 +30,7 @@ function truefalse_quiz_question_info() {
+   return array(
+     'truefalse' => array(
+       'name' => t('True/false question'),
+-      'description' => t('Quiz questions that allow a user to select "true" or "false" as his response to a statement.'),
++      'description' => t('Lesson questions that allow a user to select "true" or "false" as his response to a statement.'),
+       'question provider' => 'TrueFalseQuestion',
+       'response provider' => 'TrueFalseResponse',
+       'module' => 'quiz_question', // All wrapper functions are in that module.
+diff --git a/question_types/truefalse/truefalse.test b/question_types/truefalse/truefalse.test
+index 1e229dc..be8fac5 100644
+--- a/question_types/truefalse/truefalse.test
++++ b/question_types/truefalse/truefalse.test
+@@ -28,7 +28,7 @@ class TrueFalseUnitTest extends DrupalWebTestCase {
+     return array(
+       'name' => t('TrueFalse unit test'),
+       'description' => t('Unit test for true or false question type.'),
+-      'group' => t('Quiz'),
++      'group' => t('Lesson'),
+     );
+   }
+ 
+diff --git a/quiz.admin.inc b/quiz.admin.inc
+index bd4d2e8..187c6d9 100644
+--- a/quiz.admin.inc
++++ b/quiz.admin.inc
+@@ -22,14 +22,14 @@ function quiz_admin_settings($form, &$form_state) {
+     '#title' => t('Global Configuration'),
+     '#collapsible' => TRUE,
+     '#collapsed' => TRUE,
+-    '#description' => t('Control aspects of the Quiz module\'s display'),
++    '#description' => t('Control aspects of the Lesson module\'s display'),
+   );
+ 
+   $form['quiz_global_settings']['quiz_auto_revisioning'] = array(
+     '#type' => 'checkbox',
+     '#title' => t('Auto revisioning'),
+     '#default_value' => variable_get('quiz_auto_revisioning', 1),
+-    '#description' => t('It is strongly recommended that auto revisioning is always on. It makes sure that when a question or quiz is changed a new revision is created if the current revision has been answered. If this feature is switched off result reports might be broken because a users saved answer might be connected to a wrong version of the quiz and/or question she was answering. All sorts of errors might appear.'),
++    '#description' => t('It is strongly recommended that auto revisioning is always on. It makes sure that when a question or lesson is changed a new revision is created if the current revision has been answered. If this feature is switched off result reports might be broken because a users saved answer might be connected to a wrong version of the lesson and/or question she was answering. All sorts of errors might appear.'),
+   );
+ 
+   $form['quiz_global_settings']['quiz_durod'] = array(
+@@ -52,20 +52,20 @@ function quiz_admin_settings($form, &$form_state) {
+     '#default_value' => variable_get('quiz_default_close', 30),
+     '#size' => 4,
+     '#maxlength' => 4,
+-    '#description' => t('Supply a number of days to calculate the default close date for new quizzes.'),
++    '#description' => t('Supply a number of days to calculate the default close date for new lessons.'),
+   );
+ 
+   $form['quiz_global_settings']['quiz_use_passfail'] = array(
+     '#type' => 'checkbox',
+-    '#title' => t('Allow quiz creators to set a pass/fail option when creating a @quiz.', array('@quiz' => strtolower(QUIZ_NAME))),
++    '#title' => t('Allow lesson creators to set a pass/fail option when creating a @quiz.', array('@quiz' => strtolower(QUIZ_NAME))),
+     '#default_value' => variable_get('quiz_use_passfail', 1),
+-    '#description' => t('Check this to display the pass/fail options in the @quiz form. If you want to prohibit other quiz creators from changing the default pass/fail percentage, uncheck this option.', array('@quiz' => QUIZ_NAME)),
++    '#description' => t('Check this to display the pass/fail options in the @quiz form. If you want to prohibit other lesson creators from changing the default pass/fail percentage, uncheck this option.', array('@quiz' => QUIZ_NAME)),
+   );
+ 
+   $form['quiz_global_settings']['quiz_max_result_options'] = array(
+     '#type' => 'textfield',
+     '#title' => t('Maximum Result Options'),
+-    '#description' => t('Set the maximum number of result options (categorizations for scoring a quiz). Set to 0 to disable result options.'),
++    '#description' => t('Set the maximum number of result options (categorizations for scoring a lesson). Set to 0 to disable result options.'),
+     '#default_value' => variable_get('quiz_max_result_options', 5),
+     '#size' => 2,
+     '#maxlength' => 2,
+@@ -74,9 +74,9 @@ function quiz_admin_settings($form, &$form_state) {
+ 
+   $form['quiz_global_settings']['quiz_remove_partial_quiz_record'] = array(
+     '#type' => 'select',
+-    '#title' => t('Remove Incomplete Quiz Records (older than)'),
++    '#title' => t('Remove Incomplete Lesson Records (older than)'),
+     '#options' => quiz_remove_partial_quiz_record_value(),
+-    '#description' => t('Number of days that you like to keep the incomplete quiz records'),
++    '#description' => t('Number of days that you like to keep the incomplete lesson records'),
+     '#default_value' => variable_get('quiz_remove_partial_quiz_record', quiz_remove_partial_quiz_record_value()),
+   );
+ 
+@@ -106,7 +106,7 @@ function quiz_admin_settings($form, &$form_state) {
+   $form['quiz_addons'] = array(
+     '#type' => 'fieldset',
+     '#title' => t('Addons Configuration'),
+-    '#description' => t('Quiz can integrate with other d.o modules like !views, !cck, !userpoints and !jquery_countdown. Here you can configure the way Quiz integrates with other modules. Disabled checkboxes indicates that modules are not enabled/installed', $links),
++    '#description' => t('Lessons can integrate with other d.o modules like !views, !cck, !userpoints and !jquery_countdown. Here you can configure the way Lesson integrates with other modules. Disabled checkboxes indicates that modules are not enabled/installed', $links),
+     '#collapsible' => TRUE,
+     '#collapsed' => TRUE,
+   );
+@@ -115,7 +115,7 @@ function quiz_admin_settings($form, &$form_state) {
+     '#type' => 'checkbox',
+     '#title' => t('Enable UserPoints Module Integration'),
+     '#default_value' => variable_get('quiz_has_userpoints', 0),
+-    '#description' => t('!userpoints is an <strong>optional</strong> module for Quiz. It provides ways for users to gain or lose points for performing certain actions on your site like attending @quiz. You will need to install the !userpoints module to use this feature.', $links),
++    '#description' => t('!userpoints is an <strong>optional</strong> module for Lesson. It provides ways for users to gain or lose points for performing certain actions on your site like attending @quiz. You will need to install the !userpoints module to use this feature.', $links),
+     '#disabled' => !module_exists('userpoints'),
+   );
+ 
+@@ -123,7 +123,7 @@ function quiz_admin_settings($form, &$form_state) {
+     '#type' => 'checkbox',
+     '#title' => t('Display Timer for Timed Quiz'),
+     '#default_value' => variable_get('quiz_has_timer', 0),
+-    '#description' => t("!jquery_countdown is an <strong>optional</strong> module for Quiz. It is used to display a timer when taking a quiz. Without this timer, the user will not know how long he or she has left to complete the @quiz", $links),
++    '#description' => t("!jquery_countdown is an <strong>optional</strong> module for Lesson. It is used to display a timer when taking a lesson. Without this timer, the user will not know how long he or she has left to complete the @quiz", $links),
+     '#disabled' => !function_exists('jquery_countdown_add'),
+   );
+ 
+@@ -132,14 +132,14 @@ function quiz_admin_settings($form, &$form_state) {
+     '#title' => t('Look and Feel Settings'),
+     '#collapsible' => TRUE,
+     '#collapsed' => TRUE,
+-    '#description' => t('Control aspects of the Quiz module\'s display'),
++    '#description' => t('Control aspects of the Lesson module\'s display'),
+   );
+ 
+   $form['quiz_look_feel']['quiz_name'] = array(
+     '#type' => 'textfield',
+     '#title' => t('Display name'),
+     '#default_value' => QUIZ_NAME,
+-    '#description' => t('Change the name of the quiz type. Do you call it <em>test</em> or <em>assessment</em> instead? Change the display name of the module to something else. Currently, it is called @quiz. By default, it is called <em>Quiz</em>.',
++    '#description' => t('Change the name of the lesson type. Do you call it <em>test</em> or <em>assessment</em> instead? Change the display name of the module to something else. Currently, it is called @quiz. By default, it is called <em>Lesson</em>.',
+       array('@quiz' => QUIZ_NAME)),
+     '#required' => TRUE,
+   );
+@@ -147,7 +147,7 @@ function quiz_admin_settings($form, &$form_state) {
+   $form['quiz_email_settings'] = array(
+     '#type' => 'fieldset',
+     '#title' => t('Email Settings'),
+-    '#description' => t('Send results to quiz author/attendee via e-mail. Configure e-mail subject and body.'),
++    '#description' => t('Send results to lesson author/attendee via e-mail. Configure e-mail subject and body.'),
+     '#collapsible' => TRUE,
+     '#collapsed' => TRUE,
+   );
+@@ -160,54 +160,54 @@ function quiz_admin_settings($form, &$form_state) {
+ 
+   $form['quiz_email_settings']['taker']['quiz_email_results'] = array(
+     '#type' => 'checkbox',
+-    '#title' => t('E-mail results to quiz takers'),
++    '#title' => t('E-mail results to lesson takers'),
+     '#default_value' => variable_get('quiz_email_results', 0),
+-    '#description' => t('Check this to send users their results at the end of a quiz.')
++    '#description' => t('Check this to send users their results at the end of a lesson.')
+   );
+ 
+   $form['quiz_email_settings']['taker']['quiz_email_results_subject_taker'] = array(
+     '#type' => 'textfield',
+     '#title' => t('Configure E-mail Subject'),
+-    '#description' => t('This format will be used when sending quiz results at the end of a quiz.'),
++    '#description' => t('This format will be used when sending lesson results at the end of a lesson.'),
+     '#default_value' => variable_get('quiz_email_results_subject_taker', quiz_email_results_format('subject', 'taker')),
+   );
+ 
+   $form['quiz_email_settings']['taker']['quiz_email_results_body_taker'] = array(
+     '#type' => 'textarea',
+     '#title' => t('Configure E-mail Format'),
+-    '#description' => t('This format will be used when sending quiz results at the end of a quiz. !title(quiz title), !sitename, !taker(quiz takers username), !date(time when quiz was finished), !minutes(How many minutes the quiz taker spent taking the quiz), !desc(description of the quiz), !correct(points attained), !total(max score for the quiz), !percentage(percentage score), !url(url to the result page) and !author are placeholders.'),
++    '#description' => t('This format will be used when sending lesson results at the end of a lesson. !title(lesson title), !sitename, !taker(lesson takers username), !date(time when lesson was finished), !minutes(How many minutes the lesson taker spent taking the lesson), !desc(description of the lesson), !correct(points attained), !total(max score for the lesson), !percentage(percentage score), !url(url to the result page) and !author are placeholders.'),
+     '#default_value' => variable_get('quiz_email_results_body_taker', quiz_email_results_format('body', 'taker')),
+   );
+ 
+   $form['quiz_email_settings']['author'] = array(
+     '#type' => 'fieldset',
+-    '#title' => t('E-mail for Quiz Authors'),
++    '#title' => t('E-mail for Lesson Authors'),
+     '#collapsible' => FALSE,
+   );
+ 
+   $form['quiz_email_settings']['author']['quiz_results_to_quiz_author'] = array(
+     '#type' => 'checkbox',
+-    '#title' => t('E-mail all results to quiz author.'),
++    '#title' => t('E-mail all results to lesson author.'),
+     '#default_value' => variable_get('quiz_results_to_quiz_author', 0),
+-    '#description' => t('Check this to send quiz results for all users to the quiz author.'),
++    '#description' => t('Check this to send lesson results for all users to the lesson author.'),
+   );
+ 
+   $form['quiz_email_settings']['author']['quiz_email_results_subject'] = array(
+     '#type' => 'textfield',
+     '#title' => t('Configure E-mail Subject'),
+-    '#description' => t('This format will be used when sending quiz results at the end of a quiz. Authors and quiz takers gets the same format.'),
++    '#description' => t('This format will be used when sending lesson results at the end of a lesson. Authors and lesson takers gets the same format.'),
+     '#default_value' => variable_get('quiz_email_results_subject', quiz_email_results_format('subject', 'author')),
+   );
+ 
+   $form['quiz_email_settings']['author']['quiz_email_results_body'] = array(
+     '#type' => 'textarea',
+     '#title' => t('Configure E-mail Format'),
+-    '#description' => t('This format will be used when sending quiz results at the end of a quiz. !title(quiz title), !sitename, !taker(quiz takers username), !date(time when quiz was finished), !minutes(How many minutes the quiz taker spent taking the quiz), !desc(description of the quiz), !correct(points attained), !total(max score for the quiz), !percentage(percentage score), !url(url to the result page) and !author are placeholders.'),
++    '#description' => t('This format will be used when sending lesson results at the end of a lesson. !title(lesson title), !sitename, !taker(lesson takers username), !date(time when lesson was finished), !minutes(How many minutes the lesson taker spent taking the lesson), !desc(description of the lesson), !correct(points attained), !total(max score for the lesson), !percentage(percentage score), !url(url to the result page) and !author are placeholders.'),
+     '#default_value' => variable_get('quiz_email_results_body', quiz_email_results_format('body', 'author')),
+   );
+ 
+   $form['def_settings_link'] = array(
+-    '#markup' => '<p>' . t('Default values for the quiz creation form can be edited <a href="!url">here</a>', array('!url' => url('admin/quiz/settings/quiz_form'))) . '</p>',
++    '#markup' => '<p>' . t('Default values for the lesson creation form can be edited <a href="!url">here</a>', array('!url' => url('admin/quiz/settings/quiz_form'))) . '</p>',
+   );
+ 
+   $form['#validate'][] = 'quiz_settings_form_validate';
+@@ -223,7 +223,7 @@ function quiz_admin_settings($form, &$form_state) {
+  */
+ function quiz_settings_form_validate($form, &$form_state) {
+   if (!_quiz_is_int($form_state['values']['quiz_default_close'])) {
+-    form_set_error('quiz_default_close', t('The default number of days before a quiz is closed must be a number greater than 0.'));
++    form_set_error('quiz_default_close', t('The default number of days before a lesson is closed must be a number greater than 0.'));
+   }
+ 
+   if (!_quiz_is_int($form_state['values']['quiz_autotitle_length'], 0, 128)) {
+@@ -235,7 +235,7 @@ function quiz_settings_form_validate($form, &$form_state) {
+   }
+ 
+   if (!_quiz_is_plain($form_state['values']['quiz_name'])) {
+-    form_set_error('quiz_name', t('The quiz name must be plain text.'));
++    form_set_error('quiz_name', t('The lesson name must be plain text.'));
+   }
+ 
+   /*if (!_quiz_is_plain($form_state['values']['quiz_action_type']))
+@@ -272,7 +272,7 @@ function quiz_admin_node_form($form, &$form_state) {
+   }
+   $form = quiz_form($dummy_node, $form_state);
+   $form['direction'] = array(
+-    '#markup' => t('Here you can change the default quiz settings for new users.'),
++    '#markup' => t('Here you can change the default lesson settings for new users.'),
+     '#weight' => -10,
+   );
+   // unset values we can't or won't let the user edit default values for
+@@ -570,7 +570,7 @@ function quiz_categorized_form_validate($form, &$form_state) {
+       }
+     }
+     if (in_array($tid, array_keys($form))) {
+-      form_set_error('term', t('The category you are trying to add has already been added to this quiz.'));
++      form_set_error('term', t('The category you are trying to add has already been added to this lesson.'));
+     }
+     else {
+       form_set_value($form['tid'], $tid, $form_state);
+@@ -754,7 +754,7 @@ function quiz_questions_form($form, $form_state, $quiz) {
+   // Display questions in this quiz.
+   $form['question_list'] = array(
+     '#type' => 'fieldset',
+-    '#title' => t('Questions in this quiz'),
++    '#title' => t('Questions in this lesson'),
+     '#theme' => 'question_selection_table',
+     '#collapsible' => TRUE,
+     '#attributes' => array('id' => 'mq-fieldset'),
+@@ -781,7 +781,7 @@ function quiz_questions_form($form, $form_state, $quiz) {
+ 
+   if (empty($questions)) {
+     $form['question_list']['no_questions'] = array(
+-      '#markup' => '<div id = "no-questions">' . t('There are currently no questions in this quiz. Assign existing questions by using the question browser below. You can also use the links above to create new questions.') . '</div>',
++      '#markup' => '<div id = "no-questions">' . t('There are currently no questions in this lesson. Assign existing questions by using the question browser below. You can also use the links above to create new questions.') . '</div>',
+     );
+   }
+ 
+@@ -887,7 +887,7 @@ function _quiz_add_fields_for_random_quiz(&$form, $quiz) {
+     '#maxlength' => 3,
+     '#weight' => -5,
+     '#title' => t('Number of random questions'),
+-    '#description' => t('The number of questions to be randomly selected each time someone takes this quiz'),
++    '#description' => t('The number of questions to be randomly selected each time someone takes this lesson'),
+     '#default_value' => isset($quiz->number_of_random_questions) ? $quiz->number_of_random_questions : 10,
+   );
+   $form['question_list']['random_settings']['max_score_for_random'] = array(
+@@ -1173,11 +1173,11 @@ function _quiz_add_revision_checkbox(&$form, &$quiz) {
+   // Recomend and preselect to create the quiz as a new revision if it already has been answered
+   if (quiz_has_been_answered($quiz)) {
+     $rev_default = TRUE;
+-    $rev_description = t('This quiz has been answered. To maintain correctnes of existing answer reports changes should be saved as a new revision.');
++    $rev_description = t('This lesson has been answered. To maintain correctnes of existing answer reports changes should be saved as a new revision.');
+   }
+   else {
+     $rev_default = in_array('revision', variable_get('node_options_quiz', array()));
+-    $rev_description = t('Allow question status changes to create a new revision of the quiz?');
++    $rev_description = t('Allow question status changes to create a new revision of the lesson?');
+   }
+   if (user_access('manual quiz revisioning') && !variable_get('quiz_auto_revisioning', 1)) {
+     $form['new_revision'] = array(
+@@ -1989,7 +1989,7 @@ function quiz_results_manage_results_form($form, &$form_state, $quiz) {
+   }
+   $form['special_filters']['not_in_progress'] = array(
+     '#type' => 'checkbox',
+-    '#title' => t('Do not show quizzes in progress'),
++    '#title' => t('Do not show lessons in progress'),
+     '#parents' => array('table', 'header', 'filters', 'not_in_progress'),
+     '#default_value' => $_SESSION[$pre . 'not_in_progress'],
+     '#ajax' => array(
+diff --git a/quiz.module b/quiz.module
+index aa61a7e..1cfed8a 100644
+--- a/quiz.module
++++ b/quiz.module
+@@ -286,7 +286,7 @@ function quiz_node_info() {
+     'quiz' => array(
+       'name' => t('@quiz', array("@quiz" => QUIZ_NAME)),
+       'base' => 'quiz',
+-      'description' => 'Create interactive quizzes for site visitors',
++      'description' => 'Create interactive lessons for site visitors',
+     )
+   );
+ }
+@@ -804,7 +804,7 @@ function quiz_update($node) {
+   _quiz_check_num_random($node);
+   _quiz_check_num_always($node);
+   quiz_update_max_score_properties(array($node->vid));
+-  drupal_set_message(t('Some of the updated settings may not apply to quiz being taken already. To see all changes in action you need to start again.'), 'warning');
++  drupal_set_message(t('Some of the updated settings may not apply to lesson being taken already. To see all changes in action you need to start again.'), 'warning');
+ }
+ 
+ /**
+@@ -814,40 +814,40 @@ function quiz_field_extra_fields() {
+   $extra['node']['quiz'] = array(
+     'display' => array(
+       'take' => array(
+-        'label' => t('Take quiz button'),
++        'label' => t('Take lesson button'),
+         'description' => t('The take button.'),
+         'weight' => 10,
+       ),
+       'stats' => array(
+-        'label' => t('Quiz summary'),
+-        'description' => t('Quiz summary'),
++        'label' => t('Lesson summary'),
++        'description' => t('Lesson summary'),
+         'weight' => 9,
+       ),
+     ),
+     'form' => array(
+       'taking' => array(
+         'label' => t('Taking options'),
+-        'description' => t('Fieldset for customizing how a quiz is taken'),
++        'description' => t('Fieldset for customizing how a lesson is taken'),
+         'weight' => 0,
+       ),
+       'quiz_availability' => array(
+         'label' => t('Availability options'),
+-        'description' => t('Fieldset for customizing when a quiz is available'),
++        'description' => t('Fieldset for customizing when a lesson is available'),
+         'weight' => 0,
+       ),
+       'summaryoptions' => array(
+         'label' => t('Summary options'),
+-        'description' => t('Fieldset for customizing summaries in the quiz reports'),
++        'description' => t('Fieldset for customizing summaries in the lesson reports'),
+         'weight' => 0,
+       ),
+       'resultoptions' => array(
+         'label' => t('Result options'),
+-        'description' => t('Fieldset for customizing result comments in quiz reports'),
++        'description' => t('Fieldset for customizing result comments in lesson reports'),
+         'weight' => 0,
+       ),
+       'remember_settings' => array(
+         'label' => t('Remember settings'),
+-        'description' => t('Checkbox for remembering quiz settings'),
++        'description' => t('Checkbox for remembering lesson settings'),
+         'weight' => 0,
+       ),
+     ),
+@@ -1057,7 +1057,7 @@ function quiz_start_quiz_button_form($form, &$form_state, $node) {
+   $form['#action'] = url("node/$node->nid/take");
+   $form['button'] = array(
+     '#type' => 'submit',
+-    '#value' => t('Start quiz'),
++    '#value' => t('Start lesson'),
+   );
+   return $form;
+ }
+@@ -1169,7 +1169,7 @@ function quiz_form(&$node, &$form_state) {
+       t('Random questions'),
+       t('Categorized random questions'),
+     ),
+-    '#description' => t('The difference between "random order" and "random questions" is that with "random questions" questions are drawn randomly from a pool of questions. With "random order" the quiz will always consist of the same questions. With "Categorized random questions" you can choose several terms questions should be drawn from, and you can also choose how many questions that should be drawn from each, and max score for each term.'),
++    '#description' => t('The difference between "random order" and "random questions" is that with "random questions" questions are drawn randomly from a pool of questions. With "random order" the lesson will always consist of the same questions. With "Categorized random questions" you can choose several terms questions should be drawn from, and you can also choose how many questions that should be drawn from each, and max score for each term.'),
+     '#default_value' => $node->randomization,
+   );
+   $form['taking']['feedback'] = array(
+@@ -1230,13 +1230,13 @@ function quiz_form(&$node, &$form_state) {
+     '#title' => t('Allowed number of attempts'),
+     '#default_value' => $node->takes,
+     '#options' => $options,
+-    '#description' => t('The number of times a user is allowed to take the @quiz. <strong>Anonymous users are only allowed to take quizzes that allow an unlimited number of attempts.</strong>', array('@quiz' => QUIZ_NAME)),
++    '#description' => t('The number of times a user is allowed to take the @quiz. <strong>Anonymous users are only allowed to take lessons that allow an unlimited number of attempts.</strong>', array('@quiz' => QUIZ_NAME)),
+   );
+   $form['taking']['multiple_takes']['show_attempt_stats'] = array(
+     '#type' => 'checkbox',
+     '#title' => t('Display allowed number of attempts'),
+     '#default_value' => $node->show_attempt_stats,
+-    '#description' => t('Display the allowed number of attempts on the starting page for this quiz.'),
++    '#description' => t('Display the allowed number of attempts on the starting page for this lesson.'),
+   );
+ 
+   if (user_access('delete any quiz results') || user_access('delete results for own quiz')) {
+@@ -1261,7 +1261,7 @@ function quiz_form(&$node, &$form_state) {
+   if (function_exists('jquery_countdown_add') && variable_get('quiz_has_timer', 0)) {
+     $form['taking']['addons'] = array(
+       '#type' => 'fieldset',
+-      '#title' => t('Quiz Addons Properties'),
++      '#title' => t('Lesson Addons Properties'),
+       '#collapsible' => TRUE,
+       '#collapsed' => FALSE,
+     );
+@@ -1436,14 +1436,14 @@ function quiz_form(&$node, &$form_state) {
+       $form['resultoptions'][$i]['option_start'] = array(
+         '#type' => 'textfield',
+         '#title' => t('Percentage Start Range'),
+-        '#description' => t('Show this result for scored quizzes in this range (0-100).'),
++        '#description' => t('Show this result for scored lessons in this range (0-100).'),
+         '#default_value' => isset($option['option_start']) ? $option['option_start'] : '',
+         '#size' => 5,
+       );
+       $form['resultoptions'][$i]['option_end'] = array(
+         '#type' => 'textfield',
+         '#title' => t('Percentage End Range'),
+-        '#description' => t('Show this result for scored quizzes in this range (0-100).'),
++        '#description' => t('Show this result for scored lessons in this range (0-100).'),
+         '#default_value' => isset($option['option_end']) ? $option['option_end'] : '',
+         '#size' => 5,
+       );
+@@ -1466,7 +1466,7 @@ function quiz_form(&$node, &$form_state) {
+   $form['remember_settings'] = array(
+     '#type' => 'checkbox',
+     '#title' => t('Remember my settings'),
+-    '#description' => t('If this box is checked most of the quiz specific settings you have made will be remembered and will be your default settings next time you create a quiz.'),
++    '#description' => t('If this box is checked most of the lesson specific settings you have made will be remembered and will be your default settings next time you create a lesson.'),
+     '#weight' => 49,
+   );
+   if (quiz_has_been_answered($node) && (!user_access('manual quiz revisioning') || variable_get('quiz_auto_revisioning', 1))) {
+@@ -1944,7 +1944,7 @@ function quiz_take_quiz($quiz) {
+ 
+   if (quiz_availability($quiz) !== TRUE) {
+     drupal_set_message(t('This quiz is not available anymore.'), 'error');
+-    return array('body' => array('#markup' => t('This quiz is closed')));
++    return array('body' => array('#markup' => t('This lesson is closed')));
+   }
+ 
+   if (isset($_SESSION['quiz_' . $quiz->nid]['question_duration'])) {
+@@ -2609,14 +2609,14 @@ function quiz_email_results_format($type, $target) {
+   if ($type == 'body') {
+     if ($target == 'author') {
+       return t('Dear !author') . "\n\n" .
+-        t('!taker attended the quiz !title on !date') . "\n" .
++        t('!taker attended the lesson !title on !date') . "\n" .
+         t('Test Description : !desc') . "\n" .
+         t('!taker got !correct out of !total points in !minutes minutes. Score given in percentage is !percentage') . "\n" .
+         t('You can access the result here !url') . "\n";
+     }
+     if ($target == 'taker') {
+       return t('Dear !taker') . "\n\n" .
+-        t('You attended the quiz !title on !date') . "\n" .
++        t('You attended the lesson !title on !date') . "\n" .
+         t('Test Description : !desc') . "\n" .
+         t('You got !correct out of !total points in !minutes minutes. Score given in percentage is !percentage') . "\n" .
+         t('You can access the result here !url') . "\n";
+@@ -2832,7 +2832,7 @@ function quiz_availability($quiz) {
+   global $user;
+ 
+   if ($user->uid == 0 && $quiz->takes > 0) {
+-    return t('This quiz only allows %num_attempts attempts. Anonymous users can only access quizzes that allows an unlimited number of attempts.',
++    return t('This lesson only allows %num_attempts attempts. Anonymous users can only access lessons that allows an unlimited number of attempts.',
+       array('%num_attempts' => $quiz->takes));
+   }
+ 
+@@ -2846,7 +2846,7 @@ function quiz_availability($quiz) {
+   $now = gmmktime();
+ 
+   if ($now >= $quiz->quiz_close || $now < $quiz->quiz_open) {
+-    return t('This quiz is closed');
++    return t('This lesson is closed');
+   }
+   return TRUE;
+ }
+@@ -3431,7 +3431,7 @@ function _quiz_get_summary_text($quiz, $score) {  $summary = array();
+   if ($quiz->pass_rate > 0 && $score['percentage_score'] >= $quiz->pass_rate) {
+     // If we are coming from the admin view page.
+     if ($admin) {
+-      $summary['passfail'] = t('The user passed this quiz.');
++      $summary['passfail'] = t('The user passed this lesson.');
+     }
+     elseif (variable_get('quiz_use_passfail', 1) == 0) {
+       // If there is only a single summary text, use this.
+@@ -3450,10 +3450,10 @@ function _quiz_get_summary_text($quiz, $score) {  $summary = array();
+     // using pass/fail.
+     if ($admin) {
+       if ($quiz->pass_rate > 0) {
+-        $summary['passfail'] = t('The user failed this quiz.');
++        $summary['passfail'] = t('The user failed this lesson.');
+       }
+       else {
+-        $summary['passfail'] = t('the user completed this quiz.');
++        $summary['passfail'] = t('the user completed this lesson.');
+       }
+     }
+     elseif (trim($quiz->summary_default) != '') {
+diff --git a/quiz.pages.inc b/quiz.pages.inc
+index c16144a..5ec114d 100644
+--- a/quiz.pages.inc
++++ b/quiz.pages.inc
+@@ -166,7 +166,7 @@ function quiz_report_form_submit($form, &$form_state) {
+   }
+ 
+   // Notify the user if results got deleted as a result of him scoring an answer.
+-  $add = $quiz->keep_results == QUIZ_KEEP_BEST && $results_got_deleted ? ' ' . t('Note that this quiz is set to only keep each users best answer.') : '';
++  $add = $quiz->keep_results == QUIZ_KEEP_BEST && $results_got_deleted ? ' ' . t('Note that this lesson is set to only keep each users best answer.') : '';
+ 
+   $score_data = quiz_get_score_array($rid, $quiz->vid, TRUE);
+ 
+@@ -187,7 +187,7 @@ function _quiz_remove_unscored_message() {
+   if (is_array($_SESSION['messages']['warning'])) {
+     // Search for the message, and remove it if we find it.
+     foreach ($_SESSION['messages']['warning'] as $key => $val) {
+-      if ($val == t('This quiz has not been scored yet.')) {
++      if ($val == t('This lesson has not been scored yet.')) {
+         unset($_SESSION['messages']['warning'][$key]);
+       }
+     }
+@@ -639,7 +639,7 @@ function theme_quiz_user_summary($variables) {
+  * @ingroup themeable
+  */
+ function theme_quiz_no_feedback() {
+-  return t('Thanks for taking the quiz!');
++  return t('Thanks for taking the lesson!');
+ }
+ 
+ /**

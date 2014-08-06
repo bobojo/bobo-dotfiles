@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Opigno Messaging App</title>
+<short_name>opigno_messaging_app</short_name>
+<dc:creator>wadmiraal</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<supported_majors>1</supported_majors>
+<default_major>1</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/opigno_messaging_app</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Actively maintained</value></term>
+   <term><name>Development status</name><value>Under active development</value></term>
+   <term><name>Module categories</name><value>Education</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>opigno_messaging_app 7.x-1.0-rc3</name>
+  <version>7.x-1.0-rc3</version>
+  <tag>7.x-1.0-rc3</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc3</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2111243</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.0-rc3.tar.gz</download_link>
+  <date>1381738477</date>
+  <mdhash>59a7ec11c04ba407a19c7d5d725eea95</mdhash>
+  <filesize>9367</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.0-rc3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>59a7ec11c04ba407a19c7d5d725eea95</md5>
+    <size>9367</size>
+    <filedate>1381738477</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.0-rc3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>7e48728efeed5487efe074d90fac09cb</md5>
+    <size>10812</size>
+    <filedate>1381738477</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>opigno_messaging_app 7.x-1.0-rc2</name>
+  <version>7.x-1.0-rc2</version>
+  <tag>7.x-1.0-rc2</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc2</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2103611</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.0-rc2.tar.gz</download_link>
+  <date>1380791692</date>
+  <mdhash>fd0003e9343b8f8260117a4cde3078c8</mdhash>
+  <filesize>9372</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.0-rc2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>fd0003e9343b8f8260117a4cde3078c8</md5>
+    <size>9372</size>
+    <filedate>1380791692</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.0-rc2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>73463b38ec7f64d618ef756f9a34ca24</md5>
+    <size>10815</size>
+    <filedate>1380791692</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>opigno_messaging_app 7.x-1.0-rc1</name>
+  <version>7.x-1.0-rc1</version>
+  <tag>7.x-1.0-rc1</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2092983</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.0-rc1.tar.gz</download_link>
+  <date>1379593365</date>
+  <mdhash>015a506a0e0e25cc7f7714709298feab</mdhash>
+  <filesize>9277</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.0-rc1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>015a506a0e0e25cc7f7714709298feab</md5>
+    <size>9277</size>
+    <filedate>1379593365</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.0-rc1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>7046eee6c3e2073a4c5bc70c9b8bae72</md5>
+    <size>10735</size>
+    <filedate>1379593365</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>opigno_messaging_app 7.x-1.x-dev</name>
+  <version>7.x-1.x-dev</version>
+  <tag>7.x-1.x</tag>
+  <version_major>1</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2079273</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.x-dev.tar.gz</download_link>
+  <date>1381749272</date>
+  <mdhash>a12b211610aa4733e3f2b7f19f55d3b0</mdhash>
+  <filesize>9373</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>a12b211610aa4733e3f2b7f19f55d3b0</md5>
+    <size>9373</size>
+    <filedate>1381749272</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_messaging_app-7.x-1.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>2b6b365d52f58e09b0521151ac5afb05</md5>
+    <size>10817</size>
+    <filedate>1381749272</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+</releases>
+</project>

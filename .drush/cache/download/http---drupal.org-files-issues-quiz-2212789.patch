@@ -1,0 +1,18 @@
+diff --git a/question_types/quiz_ddlines/quiz_ddlines.classes.inc b/question_types/quiz_ddlines/quiz_ddlines.classes.inc
+index c59025b..c27088b 100644
+--- a/question_types/quiz_ddlines/quiz_ddlines.classes.inc
++++ b/question_types/quiz_ddlines/quiz_ddlines.classes.inc
+@@ -172,12 +172,7 @@ class DDLinesQuestion extends QuizQuestion {
+     
+     $default_settings = $this->getDefaultAltSettings();
+     $default_settings['mode'] = 'take';
+-    $form['#attached']['js'][] = array(
+-  		'data' => array(
+-    		'quiz_ddlines' => $default_settings
+-        ),
+-  		'type' => 'setting'
+-    );
++    drupal_add_js(array('quiz_ddlines' => $default_settings), 'setting');
+     
+     _quiz_ddlines_add_js_and_css();
+     

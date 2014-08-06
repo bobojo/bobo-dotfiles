@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Apps</title>
+<short_name>apps</short_name>
+<dc:creator>febbraro</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<recommended_major>1</recommended_major>
+<supported_majors>1</supported_majors>
+<default_major>1</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/apps</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Actively maintained</value></term>
+   <term><name>Development status</name><value>Under active development</value></term>
+   <term><name>Module categories</name><value>Features Package</value></term>
+   <term><name>Module categories</name><value>Import/Export</value></term>
+   <term><name>Module categories</name><value>Utility</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>apps 7.x-1.0-beta14</name>
+  <version>7.x-1.0-beta14</version>
+  <tag>7.x-1.0-beta14</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta14</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2311419</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta14.tar.gz</download_link>
+  <date>1406587727</date>
+  <mdhash>3844699b005ca2b800a40c2e6f3eb6f6</mdhash>
+  <filesize>157894</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta14.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>3844699b005ca2b800a40c2e6f3eb6f6</md5>
+    <size>157894</size>
+    <filedate>1406587727</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta14.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>310f72b16650d00bf56fc8d064fc5db1</md5>
+    <size>166309</size>
+    <filedate>1406587727</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta13</name>
+  <version>7.x-1.0-beta13</version>
+  <tag>7.x-1.0-beta13</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta13</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2309919</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta13.tar.gz</download_link>
+  <date>1406317727</date>
+  <mdhash>aeda3c9aa70e0c4c99b7a0f976cc174a</mdhash>
+  <filesize>157828</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta13.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>aeda3c9aa70e0c4c99b7a0f976cc174a</md5>
+    <size>157828</size>
+    <filedate>1406317727</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta13.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>2944c0386586200c92df1aa22ba7ee13</md5>
+    <size>166233</size>
+    <filedate>1406317727</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta12</name>
+  <version>7.x-1.0-beta12</version>
+  <tag>7.x-1.0-beta12</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta12</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2309395</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta12.tar.gz</download_link>
+  <date>1406240627</date>
+  <mdhash>04a31cff9b6a66e854a94a43cbdeeb13</mdhash>
+  <filesize>157674</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta12.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>04a31cff9b6a66e854a94a43cbdeeb13</md5>
+    <size>157674</size>
+    <filedate>1406240627</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta12.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>9c15c8d71d6f4a976448dd96896be0c5</md5>
+    <size>166040</size>
+    <filedate>1406240627</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta11</name>
+  <version>7.x-1.0-beta11</version>
+  <tag>7.x-1.0-beta11</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta11</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2303223</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta11.tar.gz</download_link>
+  <date>1405392227</date>
+  <mdhash>7f585495b9886e1b9128b1a6ff22b85b</mdhash>
+  <filesize>157673</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta11.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>7f585495b9886e1b9128b1a6ff22b85b</md5>
+    <size>157673</size>
+    <filedate>1405392227</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta11.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>ed1bdf8f78402956b92c1c65ad37a20c</md5>
+    <size>166040</size>
+    <filedate>1405392227</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta10</name>
+  <version>7.x-1.0-beta10</version>
+  <tag>7.x-1.0-beta10</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta10</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2301061</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta10.tar.gz</download_link>
+  <date>1405012428</date>
+  <mdhash>21c49f90026215349e5634e14b79a593</mdhash>
+  <filesize>157646</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta10.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>21c49f90026215349e5634e14b79a593</md5>
+    <size>157646</size>
+    <filedate>1405012428</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta10.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>f5460653e88b8eb3522dba240832a31d</md5>
+    <size>166008</size>
+    <filedate>1405012428</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta9</name>
+  <version>7.x-1.0-beta9</version>
+  <tag>7.x-1.0-beta9</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta9</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2299075</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta9.tar.gz</download_link>
+  <date>1404760138</date>
+  <mdhash>530ff8f8b380a792a422607890de0391</mdhash>
+  <filesize>157405</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta9.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>530ff8f8b380a792a422607890de0391</md5>
+    <size>157405</size>
+    <filedate>1404760138</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta9.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>dcaed94cf1145bf04cdf95cfb73fc73a</md5>
+    <size>165713</size>
+    <filedate>1404760138</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta8</name>
+  <version>7.x-1.0-beta8</version>
+  <tag>7.x-1.0-beta8</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta8</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2294011</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta8.tar.gz</download_link>
+  <date>1403891627</date>
+  <mdhash>81505738601c2c1ea3423909ccaac323</mdhash>
+  <filesize>156433</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta8.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>81505738601c2c1ea3423909ccaac323</md5>
+    <size>156433</size>
+    <filedate>1403891627</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta8.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>1ed1117cc18c3674551d91d737284794</md5>
+    <size>164524</size>
+    <filedate>1403891627</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta7</name>
+  <version>7.x-1.0-beta7</version>
+  <tag>7.x-1.0-beta7</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta7</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1735284</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta7.tar.gz</download_link>
+  <date>1345171003</date>
+  <mdhash>6f89d604a4d2fe7d4ec62dba4eb2d5fb</mdhash>
+  <filesize>155021</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta7.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6f89d604a4d2fe7d4ec62dba4eb2d5fb</md5>
+    <size>155021</size>
+    <filedate>1345171003</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta7.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>335ca104b17e4c632846698ef30eeccf</md5>
+    <size>163826</size>
+    <filedate>1345171003</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta6</name>
+  <version>7.x-1.0-beta6</version>
+  <tag>7.x-1.0-beta6</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta6</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1543654</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta6.tar.gz</download_link>
+  <date>1335204673</date>
+  <mdhash>2a81a016aa1f646dd37bff7a81d7467c</mdhash>
+  <filesize>152577</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta6.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>2a81a016aa1f646dd37bff7a81d7467c</md5>
+    <size>152577</size>
+    <filedate>1335204673</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta6.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>870fac7f782f5621ebaca01280ba975c</md5>
+    <size>160241</size>
+    <filedate>1335204673</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta5</name>
+  <version>7.x-1.0-beta5</version>
+  <tag>7.x-1.0-beta5</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta5</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1415864</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta5.tar.gz</download_link>
+  <date>1327443942</date>
+  <mdhash>543a04364d53a428b488a68688cf2947</mdhash>
+  <filesize>134037</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta5.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>543a04364d53a428b488a68688cf2947</md5>
+    <size>134037</size>
+    <filedate>1327443942</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta5.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>be48b183e8e14b02c3abe2892303513b</md5>
+    <size>140534</size>
+    <filedate>1327443942</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta4</name>
+  <version>7.x-1.0-beta4</version>
+  <tag>7.x-1.0-beta4</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta4</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1296282</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta4.tar.gz</download_link>
+  <date>1317417700</date>
+  <mdhash>8823205cb50c2648c1c4b1b69a1d81f2</mdhash>
+  <filesize>129742</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta4.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>8823205cb50c2648c1c4b1b69a1d81f2</md5>
+    <size>129742</size>
+    <filedate>1317417700</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta4.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>e36973dad3e1ac22dcc93ee1cc080e6d</md5>
+    <size>134774</size>
+    <filedate>1317417700</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta3</name>
+  <version>7.x-1.0-beta3</version>
+  <tag>7.x-1.0-beta3</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta3</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1286884</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta3.tar.gz</download_link>
+  <date>1316644000</date>
+  <mdhash>1f3b4c4f5442ae86b7a67e3274dfb53f</mdhash>
+  <filesize>129718</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>1f3b4c4f5442ae86b7a67e3274dfb53f</md5>
+    <size>129718</size>
+    <filedate>1316644000</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>8cbedafbbb6d840193f341435e7c884d</md5>
+    <size>134745</size>
+    <filedate>1316644000</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>apps 7.x-1.0-beta2</name>
+  <version>7.x-1.0-beta2</version>
+  <tag>7.x-1.0-beta2</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta2</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1251192</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta2.tar.gz</download_link>
+  <date>1313521314</date>
+  <mdhash>6e8978a13b1c2f3cf87a07d275841cba</mdhash>
+  <filesize>127843</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6e8978a13b1c2f3cf87a07d275841cba</md5>
+    <size>127843</size>
+    <filedate>1313521314</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.0-beta2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>7a22ea06b4f210e7f6738694712b3fe0</md5>
+    <size>133410</size>
+    <filedate>1313521314</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>apps 7.x-1.x-dev</name>
+  <version>7.x-1.x-dev</version>
+  <tag>7.x-1.x</tag>
+  <version_major>1</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1249950</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/apps-7.x-1.x-dev.tar.gz</download_link>
+  <date>1406587427</date>
+  <mdhash>21498e909912c10a2fd2b1f76f78657f</mdhash>
+  <filesize>157899</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>21498e909912c10a2fd2b1f76f78657f</md5>
+    <size>157899</size>
+    <filedate>1406587427</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/apps-7.x-1.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>ae365aa6280ac521e93af908f1916a49</md5>
+    <size>166315</size>
+    <filedate>1406587427</filedate>
+   </file>
+  </files>
+ </release>
+</releases>
+</project>

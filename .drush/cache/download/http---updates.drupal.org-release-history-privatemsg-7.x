@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Privatemsg</title>
+<short_name>privatemsg</short_name>
+<dc:creator>litwol</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<recommended_major>1</recommended_major>
+<supported_majors>1,2</supported_majors>
+<default_major>1</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/privatemsg</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Seeking co-maintainer(s)</value></term>
+   <term><name>Development status</name><value>Under active development</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>privatemsg 7.x-1.4</name>
+  <version>7.x-1.4</version>
+  <tag>7.x-1.4</tag>
+  <version_major>1</version_major>
+  <version_patch>4</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2044601</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.4.tar.gz</download_link>
+  <date>1374126670</date>
+  <mdhash>464df65c8fe589680367d5125c71f114</mdhash>
+  <filesize>108862</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.4.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>464df65c8fe589680367d5125c71f114</md5>
+    <size>108862</size>
+    <filedate>1374126670</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.4.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>ea3cec659ff98832b8d53ae6695251db</md5>
+    <size>131304</size>
+    <filedate>1374126670</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>privatemsg 7.x-1.3</name>
+  <version>7.x-1.3</version>
+  <tag>7.x-1.3</tag>
+  <version_major>1</version_major>
+  <version_patch>3</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1649338</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.3.tar.gz</download_link>
+  <date>1340212619</date>
+  <mdhash>e876954b9612b63b552dd342bc7bddba</mdhash>
+  <filesize>108332</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>e876954b9612b63b552dd342bc7bddba</md5>
+    <size>108332</size>
+    <filedate>1340212619</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>420ff00e50c1640cf3a641c988ac5ea7</md5>
+    <size>130735</size>
+    <filedate>1340212620</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Security update</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>privatemsg 7.x-1.2</name>
+  <version>7.x-1.2</version>
+  <tag>7.x-1.2</tag>
+  <version_major>1</version_major>
+  <version_patch>2</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1193134</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.2.tar.gz</download_link>
+  <date>1308483419</date>
+  <mdhash>6afacd1a7abebd4023f4eb1eb630299e</mdhash>
+  <filesize>106217</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6afacd1a7abebd4023f4eb1eb630299e</md5>
+    <size>106217</size>
+    <filedate>1308483419</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>049576299bceb013d3c9157205197abd</md5>
+    <size>128625</size>
+    <filedate>1308483419</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>privatemsg 7.x-1.1</name>
+  <version>7.x-1.1</version>
+  <tag>7.x-1.1</tag>
+  <version_major>1</version_major>
+  <version_patch>1</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1034962</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.1.tar.gz</download_link>
+  <date>1295603231</date>
+  <mdhash>074f5b34cc7cc7380adeaab271430868</mdhash>
+  <filesize>106464</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>074f5b34cc7cc7380adeaab271430868</md5>
+    <size>106464</size>
+    <filedate>1295603231</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>fb6f6790d801daaa05c425d050507ff4</md5>
+    <size>131495</size>
+    <filedate>1295603231</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>privatemsg 7.x-1.0</name>
+  <version>7.x-1.0</version>
+  <tag>7.x-1.0</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1016366</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.0.tar.gz</download_link>
+  <date>1294264563</date>
+  <mdhash>ca392e445a8c0263e0b05f2485b9ae45</mdhash>
+  <filesize>105956</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.0.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>ca392e445a8c0263e0b05f2485b9ae45</md5>
+    <size>105956</size>
+    <filedate>1294264563</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.0.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>d2d47d2e9592bee53dc53e4a59cbee8e</md5>
+    <size>131060</size>
+    <filedate>1294264563</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>privatemsg 7.x-1.0-beta1</name>
+  <version>7.x-1.0-beta1</version>
+  <tag>7.x-1.0-beta1</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>beta1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1002020</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.0-beta1.tar.gz</download_link>
+  <date>1292684571</date>
+  <mdhash>57e06a8ce8c5ff03f6fc7af6297f599f</mdhash>
+  <filesize>114008</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.0-beta1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>57e06a8ce8c5ff03f6fc7af6297f599f</md5>
+    <size>114008</size>
+    <filedate>1292684571</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.0-beta1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>0a55cf1b3ac36d932aa666cb184e52de</md5>
+    <size>144835</size>
+    <filedate>1293234082</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>privatemsg 7.x-1.0-alpha1</name>
+  <version>7.x-1.0-alpha1</version>
+  <tag>7.x-1.0-alpha1</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>alpha1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/960910</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.0-alpha1.tar.gz</download_link>
+  <date>1288779343</date>
+  <mdhash>632a62a39fb841fa650b9d885cd61175</mdhash>
+  <filesize>109650</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.0-alpha1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>632a62a39fb841fa650b9d885cd61175</md5>
+    <size>109650</size>
+    <filedate>1288779343</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.0-alpha1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>172f57849f493188015886d93151c2aa</md5>
+    <size>138197</size>
+    <filedate>1293234083</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>privatemsg 7.x-2.x-dev</name>
+  <version>7.x-2.x-dev</version>
+  <tag>7.x-2.x</tag>
+  <version_major>2</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/1130428</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/privatemsg-7.x-2.x-dev.tar.gz</download_link>
+  <date>1380623842</date>
+  <mdhash>c8617fee08055e8ebd5c2101a259d8e8</mdhash>
+  <filesize>124889</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-2.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>c8617fee08055e8ebd5c2101a259d8e8</md5>
+    <size>124889</size>
+    <filedate>1380623842</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-2.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>d65cee273e9160b91d02a7b813a6f312</md5>
+    <size>150305</size>
+    <filedate>1380623842</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>privatemsg 7.x-1.x-dev</name>
+  <version>7.x-1.x-dev</version>
+  <tag>7.x-1.x</tag>
+  <version_major>1</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/574320</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.x-dev.tar.gz</download_link>
+  <date>1380623850</date>
+  <mdhash>cf0fd42095cdea7894bd63f74261c52d</mdhash>
+  <filesize>108913</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>cf0fd42095cdea7894bd63f74261c52d</md5>
+    <size>108913</size>
+    <filedate>1380623850</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/privatemsg-7.x-1.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>85d1fcbd204929e1c23b7ec65fb00944</md5>
+    <size>131349</size>
+    <filedate>1380623850</filedate>
+   </file>
+  </files>
+ </release>
+</releases>
+</project>

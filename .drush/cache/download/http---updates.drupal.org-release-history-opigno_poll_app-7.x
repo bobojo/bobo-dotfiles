@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Opigno Poll App</title>
+<short_name>opigno_poll_app</short_name>
+<dc:creator>wadmiraal</dc:creator>
+<type>project_module</type>
+<api_version>7.x</api_version>
+<recommended_major>1</recommended_major>
+<supported_majors>1</supported_majors>
+<default_major>1</default_major>
+<project_status>published</project_status>
+<link>https://drupal.org/project/opigno_poll_app</link>
+  <terms>
+   <term><name>Projects</name><value>Modules</value></term>
+   <term><name>Maintenance status</name><value>Actively maintained</value></term>
+   <term><name>Development status</name><value>Under active development</value></term>
+   <term><name>Module categories</name><value>Community</value></term>
+   <term><name>Module categories</name><value>Education</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>opigno_poll_app 7.x-1.0</name>
+  <version>7.x-1.0</version>
+  <tag>7.x-1.0</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2206363</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0.tar.gz</download_link>
+  <date>1393490307</date>
+  <mdhash>d3b258bdac2672dd0e9fc1af008d2f66</mdhash>
+  <filesize>13799</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>d3b258bdac2672dd0e9fc1af008d2f66</md5>
+    <size>13799</size>
+    <filedate>1393490307</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>ecb09c85928d43fcc131b1808018ee5e</md5>
+    <size>15836</size>
+    <filedate>1393490307</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>opigno_poll_app 7.x-1.0-rc9</name>
+  <version>7.x-1.0-rc9</version>
+  <tag>7.x-1.0-rc9</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc9</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2115235</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc9.tar.gz</download_link>
+  <date>1382110906</date>
+  <mdhash>2fc96c407f591de1a0b7470e4474f109</mdhash>
+  <filesize>12096</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc9.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>2fc96c407f591de1a0b7470e4474f109</md5>
+    <size>12096</size>
+    <filedate>1382110906</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc9.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>b4ede1695cf1f7021a76464d6265c7f5</md5>
+    <size>13936</size>
+    <filedate>1382110906</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>opigno_poll_app 7.x-1.0-rc8</name>
+  <version>7.x-1.0-rc8</version>
+  <tag>7.x-1.0-rc8</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc8</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2111377</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc8.tar.gz</download_link>
+  <date>1381754718</date>
+  <mdhash>71ba47c60a83b6b4ed83490e9221fd83</mdhash>
+  <filesize>11526</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc8.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>71ba47c60a83b6b4ed83490e9221fd83</md5>
+    <size>11526</size>
+    <filedate>1381754718</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc8.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>a7f21dfac13178ef29ce79a153771d67</md5>
+    <size>13158</size>
+    <filedate>1381754718</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>opigno_poll_app 7.x-1.0-rc7</name>
+  <version>7.x-1.0-rc7</version>
+  <tag>7.x-1.0-rc7</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc7</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2101943</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc7.tar.gz</download_link>
+  <date>1380622257</date>
+  <mdhash>3e4848eefce34517e1ce65db6b551352</mdhash>
+  <filesize>11341</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc7.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>3e4848eefce34517e1ce65db6b551352</md5>
+    <size>11341</size>
+    <filedate>1380622257</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc7.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>a303dfb4cfff51e0caf1d3e75b5f08be</md5>
+    <size>12941</size>
+    <filedate>1380622257</filedate>
+   </file>
+  </files>
+ </release>
+ <release>
+  <name>opigno_poll_app 7.x-1.0-rc6</name>
+  <version>7.x-1.0-rc6</version>
+  <tag>7.x-1.0-rc6</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc6</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2101817</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc6.tar.gz</download_link>
+  <date>1380616834</date>
+  <mdhash>0876253f863e4559300d2317d0f270b8</mdhash>
+  <filesize>10745</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc6.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>0876253f863e4559300d2317d0f270b8</md5>
+    <size>10745</size>
+    <filedate>1380616834</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc6.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>8e26e332b5fdec59e6a37a63492f46e5</md5>
+    <size>11931</size>
+    <filedate>1380616834</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>opigno_poll_app 7.x-1.0-rc5</name>
+  <version>7.x-1.0-rc5</version>
+  <tag>7.x-1.0-rc5</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc5</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2093239</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc5.tar.gz</download_link>
+  <date>1379607527</date>
+  <mdhash>abc103631f3143e1c3332fcdfae14e23</mdhash>
+  <filesize>10594</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc5.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>abc103631f3143e1c3332fcdfae14e23</md5>
+    <size>10594</size>
+    <filedate>1379607527</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc5.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>2ed97dd835515cd934e5fe0f9c35d0dc</md5>
+    <size>11772</size>
+    <filedate>1379607527</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>opigno_poll_app 7.x-1.0-rc4</name>
+  <version>7.x-1.0-rc4</version>
+  <tag>7.x-1.0-rc4</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc4</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2092251</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc4.tar.gz</download_link>
+  <date>1379517757</date>
+  <mdhash>72222152b68e2ff163bdad71b8bc7a18</mdhash>
+  <filesize>10595</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc4.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>72222152b68e2ff163bdad71b8bc7a18</md5>
+    <size>10595</size>
+    <filedate>1379517757</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc4.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>e55f8fdd11596332f76cc5fe12f6d0f2</md5>
+    <size>11773</size>
+    <filedate>1379517758</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>opigno_poll_app 7.x-1.0-rc3</name>
+  <version>7.x-1.0-rc3</version>
+  <tag>7.x-1.0-rc3</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc3</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2092241</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc3.tar.gz</download_link>
+  <date>1379517489</date>
+  <mdhash>2301558494a32b5b34ec77d193f871cf</mdhash>
+  <filesize>10595</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>2301558494a32b5b34ec77d193f871cf</md5>
+    <size>10595</size>
+    <filedate>1379517489</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>415885613a3c4aedb3e240b37d5c05a6</md5>
+    <size>11777</size>
+    <filedate>1379517490</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>opigno_poll_app 7.x-1.0-rc2</name>
+  <version>7.x-1.0-rc2</version>
+  <tag>7.x-1.0-rc2</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc2</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2090039</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc2.tar.gz</download_link>
+  <date>1379338400</date>
+  <mdhash>367993adf4e209be12ee4cbcf5d3b8ab</mdhash>
+  <filesize>8573</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>367993adf4e209be12ee4cbcf5d3b8ab</md5>
+    <size>8573</size>
+    <filedate>1379338400</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>93e9d3ee3a26336d4b5942f2a3024588</md5>
+    <size>9378</size>
+    <filedate>1379338402</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>opigno_poll_app 7.x-1.0-rc1</name>
+  <version>7.x-1.0-rc1</version>
+  <tag>7.x-1.0-rc1</tag>
+  <version_major>1</version_major>
+  <version_patch>0</version_patch>
+  <version_extra>rc1</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2087621</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc1.tar.gz</download_link>
+  <date>1378996627</date>
+  <mdhash>2ee970918b884cb59d9d1cd64e9c6e2d</mdhash>
+  <filesize>10410</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>2ee970918b884cb59d9d1cd64e9c6e2d</md5>
+    <size>10410</size>
+    <filedate>1378996627</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.0-rc1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>9c921e224d6ac661d24f459d58ad41d5</md5>
+    <size>11564</size>
+    <filedate>1378996627</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>opigno_poll_app 7.x-1.x-dev</name>
+  <version>7.x-1.x-dev</version>
+  <tag>7.x-1.x</tag>
+  <version_major>1</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://drupal.org/node/2086473</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.x-dev.tar.gz</download_link>
+  <date>1393490006</date>
+  <mdhash>3c6aea71819c2e5cbb9e0b77d839b98e</mdhash>
+  <filesize>13808</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>3c6aea71819c2e5cbb9e0b77d839b98e</md5>
+    <size>13808</size>
+    <filedate>1393490006</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/opigno_poll_app-7.x-1.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>799aa58732852b6a64d1d2529d857e9b</md5>
+    <size>15845</size>
+    <filedate>1393490006</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+</releases>
+</project>

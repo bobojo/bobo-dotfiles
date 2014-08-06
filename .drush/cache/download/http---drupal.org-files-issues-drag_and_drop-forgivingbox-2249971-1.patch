@@ -1,0 +1,13 @@
+diff --git a/quiz_drag_drop.css b/quiz_drag_drop.css
+index 6093af5..6a27618 100755
+--- a/quiz_drag_drop.css
++++ b/quiz_drag_drop.css
+@@ -55,6 +55,8 @@
+ }
+ ul.matches li {
+   background: url(images/match-box.gif) no-repeat;
++  background-position:center;
++  padding: 20px;
+   float: left;
+   font-size: 14px;
+   font-weight: bold;
