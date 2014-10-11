@@ -1,5 +1,0 @@
-{
-    "require": {
-        "squizlabs/PHP_CodeSniffer": ">=1.4.1"
-    }
-}

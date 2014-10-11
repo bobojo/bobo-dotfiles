@@ -52,7 +52,7 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
-#defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -159,7 +159,7 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Enable the 2D Dock
-#defaults write com.apple.dock no-glass -bool true
+defaults write com.apple.dock no-glass -bool true
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
@@ -172,3 +172,38 @@ defaults write com.apple.dock hide-mirror -bool true
 
 # Reset Launchpad, but keep the desktop wallpaper intact
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
+
+###############################################################################
+# Terminal, etc.									                                            #
+###############################################################################
+
+# Set default shell to ZSH
+chsh -s /bin/zsh
+
+###############################################################################
+# Packages and helpers						                                            #
+###############################################################################
+
+# Homebrew - Package manager
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Composer - dependency manager for PHP projects, etc.
+curl -sS https://getcomposer.org/installer | php
+
+# Drush - drupal command line tool
+composer global require drush/drush:dev-master
+
+# PHP Codesniffer - debug PHP files
+composer global require "squizlabs/php_codesniffer=*"
+
+# Drupal Coder - Provides a Drupal-specific codesniffer
+drush dl -y coder
+
+# Terminus - a terminal from Pantheon used through Drush
+# Download Terminus.
+git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus
+# Download dependencies.
+cd $HOME/.drush/terminus
+composer update --no-dev
+# Clear Drush's cache.
+drush cc drush
