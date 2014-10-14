@@ -1,3 +1,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule ".extras/Sublime Text/Packages/FixMacPath"]
+	path = .extras/Sublime Text/Packages/FixMacPath
+	url = https://github.com/int3h/SublimeFixMacPath.git

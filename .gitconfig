@@ -1,16 +1,22 @@
+[core]
+  autocrlf = false
+  safecrlf = false
+  filemode = false
+  ignorecase = false
+  excludesfile = ~/.gitignore
+[branch]
+  autosetuprebase = always
+[diff]
+  renames = copies
+[color]
+  ui = true
+[alias]
+  a = apply --index
+  p = format-patch --stdout
 [user]
 	name = Jordan Bobo
 	email = bobojo@gmail.com
 [push]
 	default = matching
-[core]
-	excludesfile = /Users/bobo/.gitignore_global
-	editor = /Users/bobo/bin/subl -n -w
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [credential]
 	helper = osxkeychain
