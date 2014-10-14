@@ -189,6 +189,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 # Composer - dependency manager for PHP projects, etc.
 curl -sS https://getcomposer.org/installer | php
+composer self-update
 
 # Drush - drupal command line tool
 composer global require drush/drush:dev-master
@@ -197,7 +198,7 @@ composer global require drush/drush:dev-master
 composer global require "squizlabs/php_codesniffer=*"
 
 # Drupal Coder - Provides a Drupal-specific codesniffer
-drush dl -y coder
+composer global require drupal/coder:\>7
 
 # Terminus - a terminal from Pantheon used through Drush
 # Download Terminus.
@@ -205,5 +206,9 @@ git clone https://github.com/pantheon-systems/terminus.git $HOME/.drush/terminus
 # Download dependencies.
 cd $HOME/.drush/terminus
 composer update --no-dev
-# Clear Drush's cache.
+
+# Clear Drush's cache to load new commands.
 drush cc drush
+
+# End with Brew Doctor so I can take additional steps, if needed
+brew doctor
