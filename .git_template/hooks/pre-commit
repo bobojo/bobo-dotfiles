@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Delete any .DS_Store, Thumbs.db, or ._.* files in this repo!
+
+find ./ -name ".DS_Store" -exec rm {} \;
+find ./ -name "._.*" -exec rm {} \;
+find ./ -name ".Trashes" -exec rm -r {} \;
+find ./ -name "Thumbs.db" -exec rm {} \;

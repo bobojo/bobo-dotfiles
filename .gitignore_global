@@ -1,0 +1,34 @@
+# Patch/diff artifacts.
+*.patch
+*.diff
+*.orig
+*.rej
+interdiff*.txt
+
+# emacs artifacts.
+*~
+\#*\#
+
+# VI swap file
+*.swp
+
+# PHPStorm
+.idea
+.idea/*
+
+# Hidden files.
+.DS*
+.project
+._.*
+
+# Windows links.
+*.lnk
+
+# Temporary files.
+tmp*
+
+# Sublime Text files.
+*.sublime-*
+
+# Acquia Dev Desktop site links.
+*.dd

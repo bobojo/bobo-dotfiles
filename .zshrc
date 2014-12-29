@@ -51,7 +51,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=/Library/Developer/CommandLineTools/usr/bin:$HOME/bin/php5:/$HOME/bin:$HOME/.composer/vendor/bin:/usr/local/bin:$PATH
+eval "$(rbenv init -)"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

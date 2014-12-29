@@ -33,7 +33,7 @@ sites/*/settings*.php
 sites/*/default.settings.php
 
 # Ignore paths that contain user-generated content.
-sites/*/files
+# sites/*/files
 sites/*/private
 
 # Ignore ADD specific files
@@ -62,7 +62,7 @@ Music/
 Pictures/
 Projects/
 Public/
-Sites/
+./Sites/
 VirtualBox VMs/
 *backup*.tar.gz
 composer.phar
