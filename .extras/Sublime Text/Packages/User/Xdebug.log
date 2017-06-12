@@ -1,6 +1,0 @@
-[06/06/2014 07:35:08AM] INFO - ==== Loading 'Xdebug Client.sublime-package' package ====
-[06/06/2014 07:35:08AM] INFO - Failed to open /Users/bobo/Library/Application Support/Sublime Text 3/Packages/User/Xdebug.breakpoints.
-[06/06/2014 07:35:08AM] INFO - Failed to parse /Users/bobo/Library/Application Support/Sublime Text 3/Packages/User/Xdebug.breakpoints.
-[06/06/2014 07:35:08AM] INFO - Failed to open /Users/bobo/Library/Application Support/Sublime Text 3/Packages/User/Xdebug.expressions.
-[06/06/2014 07:35:08AM] INFO - Failed to parse /Users/bobo/Library/Application Support/Sublime Text 3/Packages/User/Xdebug.expressions.
-[06/06/2014 08:26:19AM] WARNING - Could not import subprocess32 module, falling back to subprocess module

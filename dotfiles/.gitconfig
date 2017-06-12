@@ -1,0 +1,24 @@
+[core]
+    autocrlf = false
+    safecrlf = false
+    filemode = false
+    ignorecase = false
+    excludesfile = ~/.gitignore_global
+[branch]
+    autosetuprebase = always
+[diff]
+    renames = copies
+[color]
+    ui = true
+[alias]
+    a = apply --index
+    p = format-patch --stdout
+[user]
+    name = Jordan Bobo
+    email = bobojo@gmail.com
+[push]
+    default = matching
+[credential]
+    helper = osxkeychain
+[init]
+    templatedir = ~/.git_template
