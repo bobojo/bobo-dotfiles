@@ -19,39 +19,28 @@ fi
 brew update
 
 # Back-end
-brew install php70 php70-xdebug
-sudo brew install nginx
+brew install php@7.1
+pecl install channel://pecl.php.net/mcrypt-1.0.0
+brew install httpd
 brew install mariadb
 brew install composer
-composer global require "laravel/installer"
-
-# Install Sequel Pro
-brew install caskroom/cask/brew-cask
-brew cask install --appdir="/Applications" sequel-pro
+brew install dnsmasq
+echo 'address=/.test/127.0.0.1' > /usr/local/etc/dnsmasq.conf
+sudo mkdir /etc/resolver
+sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/test'
 
 # Remove outdated versions from the cellar.
 brew cleanup
 
 # Node tools
-nvm install node
-# npm install -g coffee-script
-# npm install -g grunt-cli
 npm install -g gulp
-npm install -g gulp-cli
-npm install -g jshint
-# npm install -g less
-npm install -g sass
-npm install -g compass
 
-#gem install jekyll
-
-# CMS utilities
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-chmod +x wp-cli.phar
-mv wp-cli.phar /usr/local/bin/wp
-composer global require drush/drush
-composer global update
-curl https://drupalconsole.com/installer -L -o drupal.phar
-mv drupal.phar /usr/local/bin/drupal
-chmod +x /usr/local/bin/drupal
-drupal self-update
+# Platform.sh setup
+curl -sS https://platform.sh/cli/installer | php
+# Get Drush
+composer global require consolidation/cgr
+cgr drush/drush:^8.1.1
+DROPBOX="${HOME}/Dropbox (enterVOID Production)"
+PLATFORM="${DROPBOX}/Work/Platform.sh"
+ln -sfv "${PLATFORM}/httpd" /usr/local/etc/httpd
+ln -sfv "${PLATFORM}/php.ini" /usr/local/etc/php/7.1/php.ini
